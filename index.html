@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEAD4TECH</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="navbar">
+            <img src="img/logo-h4t-horizontal.svg" alt="logo HEAD4TECH">
+            <nav>
+                <ul id="navigation-links">
+                    <li><a href="#">Produkcja</a></li>
+                    <li><a href="#">Trading</a></li>
+                    <li><a href="#">Aktualności</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+            <span>PL</span>
+        </div>    
+    </header>
+    
+    <!-- MAIN SECTION -->
+    <section id="main-section">
+        <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z recyklingu</h1>
+        <a href="#circular-menu-section"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
+    </section>
+
+    <!-- CIRCULAR MENU SECTION -->
+    <section id="circular-menu-section">
+        <nav id="circular-nav">    
+            <div id="sector-middle"></div>
+            <ul id="circular-menu">
+                <li class="button" id="sector-one"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-two"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-three"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-four"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-five"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li id="sector-outside">
+                    <svg viewBox="0 0 100 100" id="text-on-circle-outside">
+                        <defs>
+                            <path id="circle" d="M 50, 50
+                                                 m -37, 0
+                                                 a 37,37 0 1,1 74,0
+                                                 a 37,37 0 1,1 -74,0"/>
+                        </defs>
+                        <text>
+                            <textPath xlink:href="#circle">
+                            PRODUKCJA FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp; ZGRZEWANIE FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; DOSTAWA FOLII &nbsp;&nbsp;&nbsp;&#8594&nbsp;
+                              &nbsp;&nbsp; ZAKUP ODPADU &nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; RECYKLING FOLII &nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;
+                            </textPath>
+                        </text>
+                    </svg>
+                </li>      
+            </ul>
+        </nav>      
+    
+        <svg width="0" height="0">
+            <clipPath id="sector-path" clipPathUnits="objectBoundingBox"> 
+                <path d="M .5 .5
+                         L .5 0
+                         C .283 0 .091 .139 .024 .345
+                         z"/>
+            </clipPath>
+        </svg>
+    </section>
+
+
+    <script src="js/propeller.min.js"></script>
+    <script>
+        new Propeller(document.getElementById('circular-menu'), {
+            inertia: 1,
+            speed: .04,
+         //   step: 72,
+          //  onDragStop: function() {
+              //  console.log('stop');
+          //  },
+          //  onDragStart: function () {
+            //  document.getElementById('sector-middle').onRotated.setAttribute('style', 'transform: rotate(-100deg)');
+          //  }
+           
+        });
+    
+        function showLibraryInfo() {
+            if (window.libInfoShown !== true) {
+                var windStuff = document.getElementsByClassName('wind');
+                var libStuff = document.getElementsByClassName('propeller');
+                for (var i = 0; i < windStuff.length; i++) {
+                    var obj = windStuff[i];
+                    obj.style.display = 'none';
+                }
+                for (var i = 0; i < libStuff.length; i++) {
+                    var obj = libStuff[i];
+                    obj.style.display = 'inline-block';
+                }
+                window.libInfoShown = true;
+            }
+        }
+    </script>
+
+</body>
+</html>

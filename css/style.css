@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600&display=swap');
+
+:root {
+    /* colors */
+	--main-color: #0164C1;
+	--black-color: #070513;
+	--white-color: #FFFFFF;
+	--main-color-light: #8DC3F5;
+    --main-color-super-light: #E3F2FF; /* for form */
+    --accent-color: #01C1BE; /* for button */
+    --accent-color-light: #AEF7F6;
+    --production-color: #C10164;
+    --trading-color: #64C101;
+
+    /* font */
+	--ff-primary: 'Rajdhani', sans-serif;
+
+    --fw-light: 300;
+	--fw-regular: 400;
+	--fw-semi-bold: 600;
+
+	--fs-400: 1.25rem; /* 20px navbar links */
+	--fs-600: 1.563rem; /* 25px paragraph */
+    --fs-700: 1.875rem; /* 30px form's headline */
+	--fs-900: 2.813rem; /* 45px headlines */
+}
+
+/* **************** global styles **************** */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	font-family: var(--ff-primary);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+    display: flex;
+    flex-direction: column;
+	background-color: var(--white-color);
+    overflow-x: hidden;
+}
+
+/* **************** HEADER **************** */
+
+header {
+	width: 100%;
+	height: 6rem;
+	background-color: var(--white-color);
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    width: 60rem;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+#navigation-links {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 8rem);
+    justify-items: center;
+}
+
+#navigation-links a {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+/* **************** MAIN SECTION **************** */
+
+#main-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('../img/main-section-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 57vw;
+}
+
+#main-headline {
+    font-size: var(--fs-900);
+    color: var(--white-color);
+    font-weight: var(--fw-semi-bold);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#button-down-arrow { 
+    width: 2.625rem;
+    cursor: pointer;
+}
+
+/* **************** CIRCULAR MENU SECTION **************** */
+
+#circular-nav {
+    position: relative;
+    margin: 10rem auto 0 auto;
+    padding: 0;
+    width: min(37.5rem, 60%);
+    height: 0;
+    padding-top: min(37.5rem, 60%);
+}
+
+#circular-menu {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: grab;
+ }
+
+#circular-menu .button { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: url(#sector-path);
+    transition: 0.3s;
+    filter: opacity() drop-shadow(17rem -8rem 4rem #8DC3F5);
+    z-index: 70;
+ }
+
+ #sector-outside {
+    display: block;
+    position: absolute;  
+    top: -10%;
+    left: -10%;
+    width: min(50rem, 120%);
+    height: 0;
+    padding-top: min(50rem, 120%);
+    border-radius: 50%;
+ }
+
+ #text-on-circle-outside {
+    display: block;
+    position: absolute;  
+    top: -10%;
+    left: -10%;
+    width: min(56.25rem, 120%);
+    height: min(56.25rem, 120%);
+    transform: rotate(64deg);
+    fill: var(--main-color);
+    font-size: .3rem;
+    font-weight: var(--fw-semi-bold)
+}
+
+#sector-middle {
+    display: block;
+    position: absolute;
+    background-color: var(--white-color);
+    top: 37%;
+    left: 35%;
+    width: min(12.5rem, 30%);
+    height: 0;
+    padding-top: min(12.5rem, 30%);
+    border-radius: 50%;
+    z-index: 99;
+    background-image: url('../img/logo-h4t.svg');
+    background-size: min(6rem, 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(.01rem .01rem 2rem #8DC3F5);
+}
+
+/* bg independent */
+#circular-menu .button::before {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+ }
+ 
+ #circular-menu .button:hover {
+    filter: opacity();
+    scale: 1.05;
+    z-index: 98;
+}
+
+#sector-one {
+    transform: rotate(324deg);
+}
+
+#sector-two {
+    transform: rotate(252deg);
+}
+
+#sector-three {
+    transform: rotate(180deg);
+}
+
+#sector-four {
+    transform: rotate(108deg);
+}
+ 
+#sector-five {
+    transform: rotate(36deg);
+}
+
+#sector-one::before { /* RECYKLING */
+    background: url('../img/circular-menu-button-recykling.png');
+}
+
+#sector-two::before { /* DOSTAWA */
+    background: url('../img/circular-menu-button-dostawa.png');
+}
+
+#sector-three::before { /* ZAKUP */
+    background: url('../img/circular-menu-button-dostawa.png');
+}
+
+#sector-four::before { /* ZGRZEWANIE */
+    background: url('../img/circular-menu-button-zgrzewanie.png');
+}
+
+#sector-five::before { /* PRODUKCJA */
+    background: url('../img/circular-menu-button-produkcja.png');
+}
+
+.button-link {
+    display: hidden;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    transform: rotate(323deg);
+    text-align: center;
+}
+
+.button:hover .button-link {
+    display: flex;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    font-size: 140%;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    transform: rotate(323deg);
+    text-align: center;
+    text-decoration: none;
+    filter: drop-shadow(.01rem .01rem 2rem #8DC3F5);
+    transition: .3s;
+    align-items: center;
+}
+
+.button-link:hover {
+    animation: pulse 1s infinite;
+    animation-timing-function: linear;   
+}
+
+@keyframes pulse {
+    0% { transform: scale(1) rotate(323deg)}
+    50% { transform: scale(1.1) rotate(323deg)}
+    100% { transform: scale(1) rotate(323deg)}
+}
