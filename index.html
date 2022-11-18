@@ -7,7 +7,7 @@
     <title>HEAD4TECH</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" async></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -52,8 +52,8 @@
                         </defs>
                         <text>
                             <textPath xlink:href="#circle">
-                            PRODUKCJA FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp; ZGRZEWANIE FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; DOSTAWA FOLII &nbsp;&nbsp;&nbsp;&#8594&nbsp;
-                              &nbsp;&nbsp; ZAKUP ODPADU &nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; RECYKLING FOLII &nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;
+                            PRODUKCJA FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp; ZGRZEWANIE FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp;&nbsp; DOSTAWA FOLII &nbsp;&nbsp;&nbsp;&nbsp;&#8594
+                            &nbsp;&nbsp;&nbsp;&nbsp; ZAKUP ODPADU &nbsp;&nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; RECYKLING FOLII &nbsp;&nbsp;&#8594
                             </textPath>
                         </text>
                     </svg>
@@ -71,37 +71,232 @@
         </svg>
     </section>
 
+    <section id="production">
+        <header class="headline">PRODUKCJA FOLII</header>
+        <img class="main-image-section" src="img/production.jpeg">
+        <main>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor a augue pharetra, nec viverra elit posuere. Mauris placerat rhoncus pharetra. Suspendisse vel tempus nisl. Aliquam aliquet semper auctor. Curabitur in eleifend purus. Morbi vitae molestie nisi. Phasellus dignissim vitae nisl ut bibendum. Maecenas purus enim, tempor eu felis sit amet, imperdiet scelerisque felis.
+            Aliquam aliquet augue eu augue dictum hendrerit. Etiam ultricies, erat et ultrices tincidunt, massa urna aliquam turpis, eget iaculis risus neque non urna. Vivamus feugiat at metus            sit amet imperdiet. Curabitur tempor turpis id lorem finibus sagittis. Curabitur vel dictum ligula, ut pellentesque orci. Pellentesque magna tortor, blandit vel consequat eget,        suscipit at quam. Fusce pharetra ligula tincidunt elit condimentum, sed dapibus turpis viverra.
+            Sed laoreet dolor in scelerisque imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc id lorem sit amet risus viverra interdum.          Mauris accumsan erat nulla, eget rhoncus turpis molestie vel. Nulla vel bibendum enim, ac bibendum risus. Integer sodales risus sed condimentum ultrices. Vivamus id euismod nulla,         eget egestas eros. </p>
+        </main>
+        <form>
+            Skontaktuj się
+        </form>
+    </section>
+
+
+
+    <section id="news">
+        <header class="headline">AKTUALNOŚCI</header>
+        <article>
+
+        </article>
+
+    </section>
+
+
+
+
+    <section id="contact">
+        <header class="headline">KONTAKT</header>
+        <main>
+            <span>+48 999 999 999</span>
+            <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
+        </main>
+ 
+    </section>
+
+
+
+    <footer>
+        <div id="footer-container">
+            <div>
+                <span>HEAD4TECH Sp. z o. o.</span>
+                <span>83-031 Kleszczewko, ul. Kalinowa 29</span>
+            </div>
+            <div>
+                <span>NIP: 6040228072</span>
+                <span>KRS: 0000943944</span>
+            </div>
+            <div>
+                <span>+48 999 999 999</span>
+                <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
 
     <script src="js/propeller.min.js"></script>
     <script>
+
+
+        sectorFive.style.filter = "opacity()";
+        
+        setTimeout(() => {
+        
         new Propeller(document.getElementById('circular-menu'), {
             inertia: 1,
-            speed: .04,
-         //   step: 72,
-          //  onDragStop: function() {
+            speed: .2,
+            step: 72,
+            stepTransitionTime: 1000,
+    //        stepTransitionEasing: document.getElementById('circular-menu').style.transitionTimingFunction = "easy-in-out",
+    //        onRotate: function() {
+    //        console.log(this.angle);},
+
+            onRotate: function() {
+
+                if (this.angle/this.step === 1) {
+                    sectorFive.style.filter = "opacity(20%)";
+                    sectorOne.style.filter = "opacity()";
+                    console.log(this.angle);
+                    this.speed = .2;
+                                
+                } else if (this.angle/this.step === 2) {
+                    sectorOne.style.filter = "opacity(20%)";
+                    sectorTwo.style.filter = "opacity()";
+                    console.log(this.angle);
+                 
+                 
+                } else if (this.angle/this.step === 3) {
+                    sectorTwo.style.filter = "opacity(20%)";
+                    sectorThree.style.filter = "opacity()";
+                    console.log(this.angle);
+                
+                } else if (this.angle/this.step === 4) {
+                    sectorThree.style.filter = "opacity(20%)";
+                    sectorFour.style.filter = "opacity()";
+                    console.log(this.angle);
+                 
+                } else if (this.angle/this.step === 5) {
+                    sectorFour.style.filter = "opacity(20%)";
+                    sectorFive.style.filter = "opacity()";
+                    console.log(this.angle);
+              
+                };
+
+                
+                },
+                  
+    
+            }); }, 5000);
+        
+
+
+
+            //  onDragStop: function() {
               //  console.log('stop');
           //  },
           //  onDragStart: function () {
             //  document.getElementById('sector-middle').onRotated.setAttribute('style', 'transform: rotate(-100deg)');
           //  }
+          
+          
+                  
            
-        });
+        
     
-        function showLibraryInfo() {
-            if (window.libInfoShown !== true) {
-                var windStuff = document.getElementsByClassName('wind');
-                var libStuff = document.getElementsByClassName('propeller');
-                for (var i = 0; i < windStuff.length; i++) {
-                    var obj = windStuff[i];
-                    obj.style.display = 'none';
-                }
-                for (var i = 0; i < libStuff.length; i++) {
-                    var obj = libStuff[i];
-                    obj.style.display = 'inline-block';
-                }
-                window.libInfoShown = true;
-            }
-        }
+        
+        const upButton = document.getElementsByClassName('button');
+      
+                
+        const sectorOutside = document.getElementById('sector-outside');
+
+
+        
+
+ //    //   function highlightButton() {
+//
+ //           setTimeout(() => {
+ //            sectorFive.style.filter = "opacity(20%)";
+ //            sectorOne.style.filter = "opacity()";
+ //       //     sectorOne.style.scale = "1.05";
+ //            console.log('0');
+ //        }, 5000);
+ //   
+ //            setTimeout(() => {
+ //               sectorOne.style.filter = "opacity(20%)";
+ //               sectorTwo.style.filter = "opacity()";
+ //               console.log('1');
+ //           }, 11000);
+//
+ //           setTimeout(() => {
+ //               sectorTwo.style.filter = "opacity(20%)";
+ //               sectorThree.style.filter = "opacity()";
+ //               console.log('2');
+ //           }, 17000);
+//
+ //           setTimeout(() => {
+ //               sectorThree.style.filter = "opacity(20%)";
+ //               sectorFour.style.filter = "opacity()";
+ //               console.log('3');
+ //           }, 23000);
+//
+ //           setTimeout(() => {
+ //           sectorFour.style.filter = "opacity(20%)";
+ //           sectorFive.style.filter = "opacity()";
+ //           console.log('4');
+ //       }, 29000);
+//
+ //       
+ //   };
+
+   //setInterval(highlightButton, 5000);
+
+            
+//
+//      let currentButton = upButton[0];
+//      currentButton.style.filter = "opacity()";
+//
+//      currentButton = currentButton.nextElementSibling
+//
+//      setTimeout(() => {
+//
+//          currentButton.previousElementSibling = "opacity(20%)";
+//          currentButton.style.filter = "opacity()";
+//
+//          if (currentButton.nextElementSibling = sectorOutside) {
+//                  
+//
+//      currentButton.style.filter = "opacity(20%)";
+//      } }, 5000);
+// 
+//  }};
+//
+
+        
+
+
+
+ //           if (currentImage.previousElementSibling == null) leftArrow.style.display = "none";
+//	if (currentImage.nextElementSibling == null) rightArrow.style.display = "none";
+//
+
+
+      //     setTimeout(() => {
+      //     upButton[i].style.filter = "opacity(20%)";
+      // }, 5000);
+
+
+
+ //     function showLibraryInfo() {
+ //         if (window.libInfoShown !== true) {
+ //             var windStuff = document.getElementsByClassName('wind');
+ //             var libStuff = document.getElementsByClassName('propeller');
+ //             for (var i = 0; i < windStuff.length; i++) {
+ //                 var obj = windStuff[i];
+ //                 obj.style.display = 'none';
+ //             }
+ //             for (var i = 0; i < libStuff.length; i++) {
+ //                 var obj = libStuff[i];
+ //                 obj.style.display = 'inline-block';
+ //             }
+ //             window.libInfoShown = true;
+ //         }
+ //     }
     </script>
 
 </body>
