@@ -11,25 +11,28 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header>
+    <header id="header-top">
         <div id="navbar">
             <img src="img/logo-h4t-horizontal.svg" alt="logo HEAD4TECH">
             <nav>
                 <ul id="navigation-links">
-                    <li><a href="#">Produkcja</a></li>
+                    <li><a href="#production">Produkcja</a></li>
                     <li><a href="#">Trading</a></li>
-                    <li><a href="#">Aktualności</a></li>
-                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#news">Aktualności</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </nav>
-            <span>PL</span>
+            <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div>
         </div>    
     </header>
     
     <!-- MAIN SECTION -->
     <section id="main-section">
         <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z recyklingu</h1>
-        <a href="#circular-menu-section"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
+        <div id="button-down-container">
+            <span>Poznaj nasz sposób działania</span>
+            <a href="#circular-menu-section"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
+        </div>    
     </section>
 
     <!-- CIRCULAR MENU SECTION -->
@@ -41,8 +44,9 @@
                 <li class="button" id="sector-two"><a class="button-link" href="#">POZNAJ PROCES</a></li>
                 <li class="button" id="sector-three"><a class="button-link" href="#">POZNAJ PROCES</a></li>
                 <li class="button" id="sector-four"><a class="button-link" href="#">POZNAJ PROCES</a></li>
-                <li class="button" id="sector-five"><a class="button-link" href="#">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-five"><a class="button-link" href="#production">POZNAJ PROCES</a></li>
                 <li id="sector-outside">
+                    <!-- PATH FOR TEXT ON OUTSIDE OF CIRCLE -->
                     <svg viewBox="0 0 100 100" id="text-on-circle-outside">
                         <defs>
                             <path id="circle" d="M 50, 50
@@ -61,6 +65,7 @@
             </ul>
         </nav>      
     
+        <!-- PATH FOR EACH SECTOR -->
         <svg width="0" height="0">
             <clipPath id="sector-path" clipPathUnits="objectBoundingBox"> 
                 <path d="M .5 .5
@@ -71,43 +76,64 @@
         </svg>
     </section>
 
+    <!-- PRODUCTION SECTION -->
     <section id="production">
-        <header class="headline">PRODUKCJA FOLII</header>
+        <div class="headline-with-logo">
+            <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg">
+            <div class="line line-left"></div>
+            <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
+            <div class="line line-right"></div>
+        </div>
         <img class="main-image-section" src="img/production.jpeg">
         <main>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor a augue pharetra, nec viverra elit posuere. Mauris placerat rhoncus pharetra. Suspendisse vel tempus nisl. Aliquam aliquet semper auctor. Curabitur in eleifend purus. Morbi vitae molestie nisi. Phasellus dignissim vitae nisl ut bibendum. Maecenas purus enim, tempor eu felis sit amet, imperdiet scelerisque felis.
             Aliquam aliquet augue eu augue dictum hendrerit. Etiam ultricies, erat et ultrices tincidunt, massa urna aliquam turpis, eget iaculis risus neque non urna. Vivamus feugiat at metus            sit amet imperdiet. Curabitur tempor turpis id lorem finibus sagittis. Curabitur vel dictum ligula, ut pellentesque orci. Pellentesque magna tortor, blandit vel consequat eget,        suscipit at quam. Fusce pharetra ligula tincidunt elit condimentum, sed dapibus turpis viverra.
             Sed laoreet dolor in scelerisque imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc id lorem sit amet risus viverra interdum.          Mauris accumsan erat nulla, eget rhoncus turpis molestie vel. Nulla vel bibendum enim, ac bibendum risus. Integer sodales risus sed condimentum ultrices. Vivamus id euismod nulla,         eget egestas eros. </p>
         </main>
-        <form>
-            Skontaktuj się
+        <form action="" method="post">
+            <span class="contact-form-headline">Skontaktuj się</span>
+            <input type="text" class="form-name" id="name-production" name="name" size="10" placeholder="Imię" autocomplete="on">
+            <input type="email" class="form-email" id="email-production" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
+            <input type="tel" class="form-phone" id="phone-production" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
+            <textarea type="text" class="form-message" id="message-production" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
+            <input type="submit" class="form-submit" id="submit-production" value="Wyślij">
         </form>
     </section>
 
-
-
+    <!-- NEWS SECTION -->
     <section id="news">
-        <header class="headline">AKTUALNOŚCI</header>
-        <article>
-
+        <header class="headline-clear">
+            <div class="line line-both"></div>
+            <h3 class="headline">AKTUALNOŚCI</h3>
+            <div class="line line-both"></div>
+        </header>
+        <!-- START ARTICLES -->
+        <article class="article-container">
+            <time datetime="2022-12-03 19:00">3.12.2022</time>
+            <h4>Tytuł artykułu</h4>
+            <div class="article-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
+            </div>
+            <span class="expand-article-link">Rozwiń &#9660;</span>
         </article>
-
+        <!-- END ARTICLES -->
     </section>
 
-
-
-
+    <!-- CONTACT SECTION -->
     <section id="contact">
-        <header class="headline">KONTAKT</header>
-        <main>
-            <span>+48 999 999 999</span>
+        <header class="headline-clear">
+            <div class="line line-both"></div>
+            <h3 class="headline">KONTAKT</h3>
+            <div class="line line-both"></div>
+        </header>
+        <main class="contact-data">
+            <a href="tel:">+48 999 999 999</a>
             <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
         </main>
- 
     </section>
 
-
-
+    <!-- FOOTER -->
     <footer>
         <div id="footer-container">
             <div>
@@ -119,7 +145,7 @@
                 <span>KRS: 0000943944</span>
             </div>
             <div>
-                <span>+48 999 999 999</span>
+                <a href="tel:">+48 999 999 999</a>
                 <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
             </div>
         </div>
@@ -143,6 +169,7 @@
             speed: .2,
             step: 72,
             stepTransitionTime: 1000,
+            stepTransitionEasing: "ease-in-out",
     //        stepTransitionEasing: document.getElementById('circular-menu').style.transitionTimingFunction = "easy-in-out",
     //        onRotate: function() {
     //        console.log(this.angle);},
@@ -150,31 +177,36 @@
             onRotate: function() {
 
                 if (this.angle/this.step === 1) {
-                    sectorFive.style.filter = "opacity(20%)";
+                    let styleFilterFive = sectorFive.getAttributeNode("style"); 
+                    sectorFive.removeAttributeNode(styleFilterFive);
                     sectorOne.style.filter = "opacity()";
-                    console.log(this.angle);
-                    this.speed = .2;
-                                
+                    console.log('1. ' + this.angle);
+
                 } else if (this.angle/this.step === 2) {
-                    sectorOne.style.filter = "opacity(20%)";
+                    let styleFilterOne = sectorOne.getAttributeNode("style"); 
+                    sectorOne.removeAttributeNode(styleFilterOne);
                     sectorTwo.style.filter = "opacity()";
-                    console.log(this.angle);
-                 
+                    console.log('2.' + this.angle);
                  
                 } else if (this.angle/this.step === 3) {
-                    sectorTwo.style.filter = "opacity(20%)";
+                    let styleFilterTwo = sectorTwo.getAttributeNode("style"); 
+                    sectorTwo.removeAttributeNode(styleFilterTwo);
                     sectorThree.style.filter = "opacity()";
-                    console.log(this.angle);
+                    console.log('3.' + this.angle);
                 
                 } else if (this.angle/this.step === 4) {
-                    sectorThree.style.filter = "opacity(20%)";
+                    let styleFilterThree = sectorThree.getAttributeNode("style"); 
+                    sectorThree.removeAttributeNode(styleFilterThree);
                     sectorFour.style.filter = "opacity()";
-                    console.log(this.angle);
+                    console.log('4.' + this.angle);
                  
                 } else if (this.angle/this.step === 5) {
-                    sectorFour.style.filter = "opacity(20%)";
+                    let styleFilterFour = sectorFour.getAttributeNode("style"); 
+                    sectorFour.removeAttributeNode(styleFilterFour);
                     sectorFive.style.filter = "opacity()";
-                    console.log(this.angle);
+                    console.log('5.' + this.angle);
+                    
+                    this.angle = 0;
               
                 };
 
