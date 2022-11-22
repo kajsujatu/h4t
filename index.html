@@ -13,7 +13,7 @@
     <!-- HEADER -->
     <header id="header-top">
         <div id="navbar">
-            <img src="img/logo-h4t-horizontal.svg" alt="logo HEAD4TECH">
+            <a href="#"><img src="img/logo-h4t-horizontal.svg" alt="logo HEAD4TECH"></a>
             <nav>
                 <ul id="navigation-links">
                     <li><a href="#production">Produkcja</a></li>
@@ -21,6 +21,12 @@
                     <li><a href="#news">Aktualności</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
+                <input class="checkbox" type="checkbox" name="" id="checkbox-hamburger"/>
+                <label for="checkbox-hamburger" id="hamburger-menu">
+                    <span class="menu-line line1"></span>
+                    <span class="menu-line line2"></span>
+                    <span class="menu-line line3"></span>
+                </label>
             </nav>
             <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div>
         </div>    
@@ -112,7 +118,7 @@
             <time datetime="2022-12-03 19:00">3.12.2022</time>
             <h4>Tytuł artykułu</h4>
             <div class="article-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
+                <p class="cutoff-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
             </div>
             <span class="expand-article-link">Rozwiń &#9660;</span>
@@ -128,8 +134,45 @@
             <div class="line line-both"></div>
         </header>
         <main class="contact-data">
-            <a href="tel:">+48 999 999 999</a>
-            <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
+            <div>
+                <span class="contact-form-headline">Produkcja:</span>
+                <p class="name">Rafał Dąbek</p>
+                <p><a href="tel:+48794010386">+48 794 010 386</a></p>
+                <p><a href="mailto:produkcja@h4t.com.pl">produkcja@h4t.com.pl</a></p>
+            </div>
+            <div>
+                <span class="contact-form-headline">Dział Zakupów:</span>
+                <p class="name">Krzysztof Rudziński</p>
+                <p><a href="tel:+48664926413">+48 664 926 413</a></p>
+                <p><a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a></p>
+            </div>
+            <div>
+                <span class="contact-form-headline">Księgowość:</span>
+                <p class="name">Monika Sucholewska</p>
+                <p><a href="tel:+48530861292">+48 530 861 292</a></p>
+                <p><a href="mailto:ksiegowosc@h4t.com.pl">ksiegowosc@h4t.com.pl</a></p>
+            </div>
+            <div class="line">       
+            </div>
+            <div>
+                <span class="contact-form-headline">Zakład nr 1:</span>
+                <p>Stara Dębowa Wola 25A</p>
+                <p>27-400 Stara Dębowa Wola</p>
+            
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.2338691346063!2d21.42174468209811!3d50.9949745441264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47180bb6556a4495%3A0x9b2058c93ccfeacf!2sStara%20D%C4%99bowa%20Wola%2025A%2C%2027-400%20Stara%20D%C4%99bowa%20Wola!5e0!3m2!1spl!2spl!4v1669134645164!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <span class="contact-form-headline">Zakład nr 2:</span>
+                <p>Batalionów Chłopskich 71</p>
+                <p>25-671 Kielce</p>
+    
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.573996609573!2d20.594757015955576!3d50.89459446314277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4718286fc3074b59%3A0xa737f48705394d61!2sBatalion%C3%B3w%20Ch%C5%82opskich%2071%2C%2025-671%20Kielce!5e0!3m2!1spl!2spl!4v1669134720338!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div>
+                <span class="contact-form-headline">Biuro Handlowe Pomorze:</span>
+                <p>ul. Kalinowa 29</p>
+                <p>83-031 Kleszczewko</p>
+            </div>    
         </main>
     </section>
 
@@ -137,199 +180,18 @@
     <footer>
         <div id="footer-container">
             <div>
-                <span>HEAD4TECH Sp. z o. o.</span>
-                <span>83-031 Kleszczewko, ul. Kalinowa 29</span>
+                <span>HEAD4TECH Sp. z o. o. Wszelkie prawa zastrzeżone</span>
             </div>
             <div>
                 <span>NIP: 6040228072</span>
                 <span>KRS: 0000943944</span>
             </div>
             <div>
-                <a href="tel:">+48 999 999 999</a>
-                <a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a>
-            </div>
+                                            </div>
         </div>
     </footer>
 
-
-
-
-
-
-    <script src="js/propeller.min.js"></script>
-    <script>
-
-
-        sectorFive.style.filter = "opacity()";
-        
-        setTimeout(() => {
-        
-        new Propeller(document.getElementById('circular-menu'), {
-            inertia: 1,
-            speed: .2,
-            step: 72,
-            stepTransitionTime: 1000,
-            stepTransitionEasing: "ease-in-out",
-    //        stepTransitionEasing: document.getElementById('circular-menu').style.transitionTimingFunction = "easy-in-out",
-    //        onRotate: function() {
-    //        console.log(this.angle);},
-
-            onRotate: function() {
-
-                if (this.angle/this.step === 1) {
-                    let styleFilterFive = sectorFive.getAttributeNode("style"); 
-                    sectorFive.removeAttributeNode(styleFilterFive);
-                    sectorOne.style.filter = "opacity()";
-                    console.log('1. ' + this.angle);
-
-                } else if (this.angle/this.step === 2) {
-                    let styleFilterOne = sectorOne.getAttributeNode("style"); 
-                    sectorOne.removeAttributeNode(styleFilterOne);
-                    sectorTwo.style.filter = "opacity()";
-                    console.log('2.' + this.angle);
-                 
-                } else if (this.angle/this.step === 3) {
-                    let styleFilterTwo = sectorTwo.getAttributeNode("style"); 
-                    sectorTwo.removeAttributeNode(styleFilterTwo);
-                    sectorThree.style.filter = "opacity()";
-                    console.log('3.' + this.angle);
-                
-                } else if (this.angle/this.step === 4) {
-                    let styleFilterThree = sectorThree.getAttributeNode("style"); 
-                    sectorThree.removeAttributeNode(styleFilterThree);
-                    sectorFour.style.filter = "opacity()";
-                    console.log('4.' + this.angle);
-                 
-                } else if (this.angle/this.step === 5) {
-                    let styleFilterFour = sectorFour.getAttributeNode("style"); 
-                    sectorFour.removeAttributeNode(styleFilterFour);
-                    sectorFive.style.filter = "opacity()";
-                    console.log('5.' + this.angle);
-                    
-                    this.angle = 0;
-              
-                };
-
-                
-                },
-                  
-    
-            }); }, 5000);
-        
-
-
-
-            //  onDragStop: function() {
-              //  console.log('stop');
-          //  },
-          //  onDragStart: function () {
-            //  document.getElementById('sector-middle').onRotated.setAttribute('style', 'transform: rotate(-100deg)');
-          //  }
-          
-          
-                  
-           
-        
-    
-        
-        const upButton = document.getElementsByClassName('button');
-      
-                
-        const sectorOutside = document.getElementById('sector-outside');
-
-
-        
-
- //    //   function highlightButton() {
-//
- //           setTimeout(() => {
- //            sectorFive.style.filter = "opacity(20%)";
- //            sectorOne.style.filter = "opacity()";
- //       //     sectorOne.style.scale = "1.05";
- //            console.log('0');
- //        }, 5000);
- //   
- //            setTimeout(() => {
- //               sectorOne.style.filter = "opacity(20%)";
- //               sectorTwo.style.filter = "opacity()";
- //               console.log('1');
- //           }, 11000);
-//
- //           setTimeout(() => {
- //               sectorTwo.style.filter = "opacity(20%)";
- //               sectorThree.style.filter = "opacity()";
- //               console.log('2');
- //           }, 17000);
-//
- //           setTimeout(() => {
- //               sectorThree.style.filter = "opacity(20%)";
- //               sectorFour.style.filter = "opacity()";
- //               console.log('3');
- //           }, 23000);
-//
- //           setTimeout(() => {
- //           sectorFour.style.filter = "opacity(20%)";
- //           sectorFive.style.filter = "opacity()";
- //           console.log('4');
- //       }, 29000);
-//
- //       
- //   };
-
-   //setInterval(highlightButton, 5000);
-
-            
-//
-//      let currentButton = upButton[0];
-//      currentButton.style.filter = "opacity()";
-//
-//      currentButton = currentButton.nextElementSibling
-//
-//      setTimeout(() => {
-//
-//          currentButton.previousElementSibling = "opacity(20%)";
-//          currentButton.style.filter = "opacity()";
-//
-//          if (currentButton.nextElementSibling = sectorOutside) {
-//                  
-//
-//      currentButton.style.filter = "opacity(20%)";
-//      } }, 5000);
-// 
-//  }};
-//
-
-        
-
-
-
- //           if (currentImage.previousElementSibling == null) leftArrow.style.display = "none";
-//	if (currentImage.nextElementSibling == null) rightArrow.style.display = "none";
-//
-
-
-      //     setTimeout(() => {
-      //     upButton[i].style.filter = "opacity(20%)";
-      // }, 5000);
-
-
-
- //     function showLibraryInfo() {
- //         if (window.libInfoShown !== true) {
- //             var windStuff = document.getElementsByClassName('wind');
- //             var libStuff = document.getElementsByClassName('propeller');
- //             for (var i = 0; i < windStuff.length; i++) {
- //                 var obj = windStuff[i];
- //                 obj.style.display = 'none';
- //             }
- //             for (var i = 0; i < libStuff.length; i++) {
- //                 var obj = libStuff[i];
- //                 obj.style.display = 'inline-block';
- //             }
- //             window.libInfoShown = true;
- //         }
- //     }
-    </script>
+    <script src="js/propeller.min.js" async></script>
 
 </body>
 </html>
