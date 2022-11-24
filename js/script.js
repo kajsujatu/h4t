@@ -9,17 +9,17 @@ const sectorFour = document.getElementById('sector-four');
 const sectorFive = document.getElementById('sector-five');
 
 function setLogoProductionInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(../h4t/img/logo-h4t-produkcja.svg)";
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-produkcja.svg)";
     sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";    
 };
 
 function setLogoTradingInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(../h4t/img/logo-h4t-trading.svg)";
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-trading.svg)";
     sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";    
 };
 
 function setBasicLogoInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(../h4t/img/logo-h4t.svg)";
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t.svg)";
     sectorMiddle.style.backgroundSize = "min(6rem, 50%)";
 };
 
@@ -55,20 +55,14 @@ submitProduction.addEventListener('click', function() {
 
 
     const navigationLinks = document.getElementById('navigation-links');
-    const checkboxHamburger = document.getElementById('checkbox-hamburger');
+    const checkboxHamburger = document.getElementById('hamburger-menu');
 
-    checkboxHamburger.addEventListener('change', function() {
-         //   navigationLinks.style.display = "flex";
-            navigationLinks.classList.toggle('mobile-links');
+    checkboxHamburger.addEventListener('click', function() {
+            navigationLinks.classList.toggle('nav-mobile')
+                        
+
+         //   navigationLinks.classList.toggle('mobile-links');
      });
-
-
-
-
-
-
-
-
 
 
 // Propeller.js
