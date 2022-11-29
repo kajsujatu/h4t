@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <title>HEAD4TECH</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -13,20 +13,20 @@
     <!-- HEADER -->
     <header id="header-top">
         <div id="navbar">
-            <a href="#"><img src="img/logo-h4t-horizontal.svg" alt="logo HEAD4TECH"></a>
+            <a href="#"><img src="img/logo-h4t-horizontal.svg" id="logo-top" alt="logo HEAD4TECH"></a>
             <nav>
-                <ul id="navigation-links">
+                <ul id="navigation-links" data-visible="false">
                     <li><a href="#production">Produkcja</a></li>
                     <li><a href="#">Trading</a></li>
                     <li><a href="#news">Aktualności</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                 </ul>
-                <input class="checkbox" type="checkbox" name="" id="checkbox-hamburger"/>
-                <label for="checkbox-hamburger" id="hamburger-menu">
+                <button id="nav-mobile" aria-controls="navigation-links" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
                     <span class="menu-line line1"></span>
                     <span class="menu-line line2"></span>
                     <span class="menu-line line3"></span>
-                </label>
+                </button>
             </nav>
             <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div>
         </div>    
@@ -37,13 +37,15 @@
         <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z&nbsp;recyklingu</h1>
         <div id="button-down-container">
             <span>Poznaj nasz sposób działania</span>
-            <a href="#circular-menu-section"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
+            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
         </div>    
     </section>
 
+    <span id="mark-for-button-down-arrow"></span>
+
     <!-- CIRCULAR MENU SECTION -->
     <section id="circular-menu-section">
-        <nav id="circular-nav">    
+        <nav id="circular-nav">
             <div id="sector-middle"></div>
             <ul id="circular-menu">
                 <li class="button" id="sector-one"><a class="button-link" href="#">POZNAJ PROCES</a></li>
@@ -70,7 +72,7 @@
                 </li>      
             </ul>
         </nav>      
-    
+
         <!-- PATH FOR EACH SECTOR -->
         <svg width="0" height="0">
             <clipPath id="sector-path" clipPathUnits="objectBoundingBox"> 
@@ -92,12 +94,65 @@
             <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
             <div class="line line-right"></div>
         </div>
-        <img class="main-image-section" src="img/production.jpeg">
+        <img class="main-image-section" src="img/produkcja-folii.jpg">
         <main>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas tortor a augue pharetra, nec viverra elit posuere. Mauris placerat rhoncus pharetra. Suspendisse vel tempus nisl. Aliquam aliquet semper auctor. Curabitur in eleifend purus. Morbi vitae molestie nisi. Phasellus dignissim vitae nisl ut bibendum. Maecenas purus enim, tempor eu felis sit amet, imperdiet scelerisque felis.
-            Aliquam aliquet augue eu augue dictum hendrerit. Etiam ultricies, erat et ultrices tincidunt, massa urna aliquam turpis, eget iaculis risus neque non urna. Vivamus feugiat at metus            sit amet imperdiet. Curabitur tempor turpis id lorem finibus sagittis. Curabitur vel dictum ligula, ut pellentesque orci. Pellentesque magna tortor, blandit vel consequat eget,        suscipit at quam. Fusce pharetra ligula tincidunt elit condimentum, sed dapibus turpis viverra.
-            Sed laoreet dolor in scelerisque imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc id lorem sit amet risus viverra interdum.          Mauris accumsan erat nulla, eget rhoncus turpis molestie vel. Nulla vel bibendum enim, ac bibendum risus. Integer sodales risus sed condimentum ultrices. Vivamus id euismod nulla,         eget egestas eros. </p>
+            <p>
+            Recykling tworzyw sztucznych polega na właściwym przygotowaniu surowca do ponownego wykorzystania. W jego ramach różne rodzaje tworzyw są odpowiednio segregowane, oczyszczane i poddawane procesom, za których sprawą nadają się do ponownego wykorzystania. Wytworzone w ten sposób półprodukty - regranulaty są wykorzystywane do ponownego wykorzystania. Podstawową zaletą wykorzystania wysokojakościowych regranulatów wytworzonych z poprodukcyjnych odpadów tworzyw sztucznych daje bardzo duże możliwości w zakresie wykonywania z niego nowych, gotowych produktów, o jakości spełniającej wysokie wymagania odbiorców.
+            </p>
+            <ol id="ol-production-container">
+                <li><span class="list-item-headline">KIM JESTEŚMY</span>
+                    <ul>
+                        <li>
+                            <b>Liderem w branży worków U-Liner, Bootle Neck, Open Top.</b> W swojej ofercie mamy również produkty dla branży meblarskiej, chemicznej, spożywczej.
+                        </li>
+                        <li>
+                            Do tej pory zaufało nam większość producentów opakowań BIG-BAG w Polsce.
+                        </li>
+                        <li>
+                            Nasze produkty można spotkać w Niemczech, Szwecji, Serbii, Francji, Litwie.
+                        </li>
+                        <li>
+                            Do grudnia 2022 roku sprzedaliśmy 17 mln worków o łącznej wadze 8 mln kilogramów.
+                        </li>
+                        <li>
+                            Nieprzerwanie od kilku lat dla odbiorców nasze produkty są synonimem precyzji i jakości.
+                        </li>
+                    </ul>
+                </li>
+                <li><span class="list-item-headline">CO ROBIMY</span>
+                    <ul>
+                        <li>
+                            <b>Niezawodne opakowania o skomplikowanych nazwach, U-Liner, Bootle-Neck, Open Top.</b> To nic innego jak ogromne worki foliowe doskonałe jako bariera przed wilgocią, wodą, słońcem, brudem, pyłem i różnego rodzaju zanieczyszczeniami.
+                        </li>
+                        <li>
+                            Nasze produkty skierowane są głównie (ale nie tylko) do producentów kontenerów elastycznych typu BIG-BAG z angielskiego FIBC.
+                        </li>
+                    </ul>
+                </li> 
+                <li><span class="list-item-headline">CO NAS WYRÓŻNIA</span> 
+                    <ul>
+                        <li>
+                            Tworzymy team, w którym jesteśmy dumni z każdego klienta, z pobitych rekordów, z wizyt klientów w naszej firmie, ze wszystkich stałych i nowych zleceń, z nawet najmniejszej redukcji odpadu produkcyjnego! Wspólnie, począwszy od Pomocnika Operatora skończywszy na Dyrektorze Generalnym, pracujemy, by nasza misja <b>STANIA SIĘ DOSTAWCĄ PIERWSZEGO WYBORU</b>, była nie tylko hasłem, ale ideą, która pomaga dostarczać klientom dobrej jakości worki, rozwiązania magazynowe, ewidencyjne i technologiczne z zakresu prowadzonej działalności.
+                        </li>    
+                        <li>
+                            W 2014 roku pierwsi w Polsce zakupiliśmy zgrzewarkę foliową ULiner z zastosowaniem zgrzewania impulsowego. Oraz trójwarstwową linię do produkcji folii LDPE. <b>To dzięki temu urządzeniu możemy zrobić dla Was do 500.000 tys. worków miesięcznie. Wynik ten plasuje nas na pierwszym miejscu w segmencie produkcji wkładów foliowych branży BIG-BAG (FIBC).</b>
+                        </li>
+                        <li>
+                            Wykorzystujemy zasady Gospodarki Obiegu Zamkniętego. Skład wyrobów zaprojektowaliśmy w taki sposób, by odpady technologiczne mogły zyskać drugie życie. W tym celu uruchomiliśmy własną linię do recyklingu opakowań PE. Prowadzimy również odbiór niezużytych i wadliwych opakowań powstałych u naszych klientów. W tym roku wprowadziliśmy JAKO PIERWSI W POLSCE wykonaną w 100% z recyklatu PPR oraz PCR wkładkę foliową z kominem zasypowym typu Uliner. o parametrach zbliżonych do wkładki wykonanej z oryginału. 
+                        </li>
+                    </ul>
+                </li>     
+            </ol>    
+            <h3 class="list-item-headline center-text">PRODUKT SKROJONY NA MIARĘ</h3>
+                <p>
+                    Masz problem z realizacją nietypowego worka? A może w ekspresowym tempie musisz dostarczyć próbę produktu do klienta? Chcesz specyficzny kolor lub rozmiar worka? Nagle w piątek późnym popołudniem kontrahent zamówił nieprzewidzianą partię z krótkim terminem realizacji? Stary dostawca zawiódł? Poszukujesz nowego dostawcy? Któż z nas nie boryka się z takimi problemami? Skontaktuj się z nami, wspólnie rozwiążemy nawet najtrudniejszy problem.
+                </p>
+            <h3 class="list-item-headline center-text">WSPÓŁPRACA MIĘDZYNARODOWA</h3>
+                <p>             
+                    Mamy bogate doświadczenie biznesowe z firmami z Unii Europejskiej, jak i państw poza wspólnotą. Dzięki sprawnej i wykwalifikowanej kadrze jesteśmy w stanie dopasować nasze produkty do indywidualnych potrzeb
+                </p>
         </main>
+
         <form action="" method="post">
             <span class="contact-form-headline">Skontaktuj się</span>
             <input type="text" class="form-name" id="name-production" name="name" size="10" placeholder="Imię" autocomplete="on">
@@ -107,6 +162,152 @@
             <input type="submit" class="form-submit" id="submit-production" value="Wyślij">
         </form>
     </section>
+
+
+    <section id="welding">
+        <div class="headline-with-logo">
+            <div class="logo-horizontal-container">
+                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg">
+            </div>
+            <div class="line line-left"></div>
+            <h2 class="headline-next-to-logo">ZGRZEWANIE FOLII</h2>
+            <div class="line line-right"></div>
+        </div>
+        <img class="main-image-section" src="img/zgrzewanie-folii.jpg">
+        <main>
+            <p>
+                <b>Wkłady foliowe przystosowane do wielkogabarytowych worków BIG BAG to produkty wielokrotnego użytku.</b> Wkłady do BIG BAG-ów mają szerokie zastosowanie w przemyśle rolniczym, spożywczym oraz transportowym. Wkłady wykonane z folii często używane są do magazynowania nawozów, substancji pylistych, jak również kiszenia produktów spożywczych. Wkład umieszczony w kontenerze BIG BAG stanowi dodatkową ochronę dla przechowywanego czy transportowanego towaru. Chroni towar przed wilgocią, jak również pełni funkcję uszczelnienia szwów. 
+            </p>
+            <ol id="ol-welding-container" class="ol-container">
+                <li><h3 class="list-item-headline">U-liner</h3>
+                    <ul>
+                        <li>
+                            <b>Wkłady foliowe do Big-Bag typu U-liner</b> to idealne rozwiązanie dla producentów tego typu kontenerów elastycznych. Dzięki precyzyjnemu wycięciu „U” uzyskujemy po bokach leja zasypowego nadmiar rękawa foliowego niezbędny do pewnego wszycia w big-bag.
+                        </li>
+                        <li>
+                            Dostępny w wersji ze zgrzewami skośnymi i perforacjami odpowietrzającymi, jak i bez.
+                        </li>
+                        <li>
+                            <span class="technical-data">Dane techniczne:</span>
+                            <ul>
+                                <li>grubość folii: 30-120 mikronów</li>
+                                <li>wysokość: max. 3500 mm</li>
+                                <li>szerokość: max. 1500 mm</li>
+                                <li>szerokość leja: max. 1100 mm</li>
+                                <li>wysokość leja: max. 700 mm</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#contact-form-welding" class="contact-in-text-to-redirect">Prosimy o kontakt</a> w celu uzyskania większej ilości informacji. Po szczegółowych konsultacjach wykonujemy również nietypowe zamówienia, wymagające modernizacji maszyny.
+                        </li>
+                    </ul>
+                </li>
+                <li><h3 class="list-item-headline">Bottle Bag</h3>
+                    <ul>
+                        <li>
+                            <b>Wkłady foliowe do Big-Bag typu Bottle Bag</b> to idealne rozwiązanie dla producentów tego typu kontenerów elastycznych. Tak wykonany worek posiada jedynie lej zasypowy. Sprawdza się jako wkład tam, gdzie niepotrzebne są dodatkowe mocowania.
+                        </li>
+                        <li>
+                            Dostępny w wersji ze zgrzewami skośnymi i perforacjami odpowietrzającymi, jak i bez.
+                        </li>
+                        <li>
+                            <span class="technical-data">Dane techniczne:</span>
+                            <ul>
+                                <li>grubość folii: 30-120 mikronów</li>
+                                <li>wysokość: max. 3500 mm</li>
+                                <li>szerokość: max. 1500 mm</li>
+                                <li>szerokość leja: max. 1100 mm</li>
+                                <li>wysokość leja: max. 700 mm</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#contact-form-welding" class="contact-in-text-to-redirect">Prosimy o kontakt</a> w celu uzyskania większej ilości informacji. Po szczegółowych konsultacjach wykonujemy również nietypowe zamówienia, wymagające modernizacji maszyny.
+                        </li>
+                    </ul>
+                </li>
+                <li><h3 class="list-item-headline">Open Top</h3>
+                    <ul>
+                        <li>
+                            <b>Wkłady foliowe do Big-Bag typu OPEN TOP</b> to idealne rozwiązanie dla producentów tego typu kontenerów elastycznych. Wykonany worek posiada mocny i precyzyjny zgrzew denny. Chroni przed wilgocią. Może być również stosowany jako „kaptur” ochronny.
+                        </li>
+                        <li>
+                            Tego typu worek produkujemy również z foli z zakładkami — dzięki temu szerokość maksymalna wzrasta do max. 2900 mm.
+                        </li>
+                        <li>
+                            Dane techniczne:
+                            <ul>                
+                                <li>grubość folii: 30-120 mikronów</li>
+                                <li>wysokość: max. 3500 mm</li>
+                                <li>szerokość: max. 1500 mm (bez zakładek w środku rękawa)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#contact-form-welding" class="contact-in-text-to-redirect">Prosimy o kontakt</a> w celu uzyskania większej ilości informacji. Po szczegółowych konsultacjach wykonujemy również nietypowe zamówienia, wymagające modernizacji maszyny.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+
+                <h3 class="list-item-headline center-text">Metoda 8 kroków do uzyskania perfekcyjnego worka</h3>
+                <p>
+                    Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
+                </p>
+                <ol id="ol-welding-container-steps">
+                    <li><span class="list-item-headline">Krok pierwszy — produkcja rękawa</span>
+                        <ul>
+                            <li>trójwarstwowa linia do rozdmuchu folii</li>
+                            <li>automatyczny system kontroli grubości</li>
+                            <li>grawimetryczny system dozowania granulatów</li>
+                            <li>kontrola prowadzenia wstęgi</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok drugi — badanie grubości</span>
+                        <ul>
+                            <li>na każdej rolce przeprowadzamy pomiar średniej grubości folii w warunkach laboratoryjnych</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok trzeci — badanie na wydłużenie wzdłużne i poprzeczne</span>
+                        <ul>
+                            <li>każdą wyprodukowaną rolkę sprawdzamy pod względem składu oraz pod kątem rozciągliwości</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok czwarty — badanie udarności</span>
+                        <ul>
+                            <li>na urządzeniu do sprawdzania DART DROP badamy jaką siłę wytrzyma nasza folia w teście symulującym przebicie</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok piąty — zgrzewanie worków</span>
+                        <ul>
+                            <li>produkcja worka na impulsowej zgrzewarce, z wydajnością do 20 tys. worków U-liner oraz Bootle Neck dziennie</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok szósty — wytrzymałość zgrzewów</span>
+                        <ul>
+                            <li>test na zaprojektowanej przez naszych specjalistów maszynie do kontroli wytrzymałości zgrzewu</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok siódmy — kontrola jakości</span>
+                        <ul>
+                            <li>każdy nasz worek jest przeglądany przez pracowników Działu Kontroli Jakości</li>
+                        </ul>
+                    </li>
+                    <li><span class="list-item-headline">Krok ósmy — odpowiednie opakowanie</span>
+                        <ul>
+                            <li>nasze worki transportowane są w specjalnie zaprojektowanych kartonowych BOX-ach, dzięki czemu eliminujemy ich uszkodzenie, zabrudzenie, otarcia, zamoknięcia</li>
+                        </ul>
+                    </li>
+                </ol>
+        </main>
+        <form action="" method="post" id="contact-form-welding">
+            <span class="contact-form-headline">Skontaktuj się</span>
+            <input type="text" class="form-name" id="name-welding" name="name" size="10" placeholder="Imię" autocomplete="on">
+            <input type="email" class="form-email" id="email-welding" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
+            <input type="tel" class="form-phone" id="phone-welding" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
+            <textarea type="text" class="form-message" id="message-weldingn" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
+            <input type="submit" class="form-submit" id="submit-welding" value="Wyślij">
+        </form>
+    </section>
+
 
     <!-- NEWS SECTION -->
     <section id="news">
@@ -190,10 +391,7 @@
                 <span>NIP: 6040228072</span>
                 <span>KRS: 0000943944</span>
             </div>
-            <div>
-                                            </div>
-        </div>
-    </footer>
+        </footer>
 
     <script src="js/propeller.min.js" async></script>
 
