@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta name="description" content="Tworzymy nowoczesne produkty z materiałów pochodzących z recyklingu. Jesteśmy liderem w branży worków U-Liner, Bootle Neck, Open Top."/>
     <title>HEAD4TECH</title>
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" async></script>
+    <?php include 'sentMail.php';?>
 </head>
 <body>
     <!-- HEADER -->
     <header id="header-top">
         <div id="navbar">
-            <a href="#"><img src="img/logo-h4t-horizontal.svg" id="logo-top" alt="logo HEAD4TECH"></a>
+            <a href="#"><img src="img/logo-h4t-horizontal.svg" id="logo-top" alt="HEAD4TECH"></a>
             <nav>
                 <ul id="navigation-links" data-visible="false">
                     <li><a href="#production">Produkcja</a></li>
@@ -37,7 +39,7 @@
         <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z&nbsp;recyklingu</h1>
         <div id="button-down-container">
             <span>Poznaj nasz sposób działania</span>
-            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg"></img></a>
+            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg" alt=""></img></a>
         </div>    
     </section>
 
@@ -88,13 +90,13 @@
     <section id="production" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg">
+                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
             <div class="line line-right"></div>
         </div>
-        <img class="main-image-section" src="img/produkcja-folii.jpg">
+        <img class="main-image-section" src="img/produkcja-folii.jpg" alt="">
         <main>
             <ol id="ol-production-container" class="ol-container">
                 <li><span class="list-item-headline">KIM JESTEŚMY</span>
@@ -146,17 +148,17 @@
                 </p>
             <h3 class="list-item-headline center-text">WSPÓŁPRACA MIĘDZYNARODOWA</h3>
                 <p>             
-                    Mamy bogate doświadczenie biznesowe z firmami z Unii Europejskiej, jak i państw poza wspólnotą. Dzięki sprawnej i wykwalifikowanej kadrze jesteśmy w stanie dopasować nasze produkty do indywidualnych potrzeb
+                    Mamy bogate doświadczenie biznesowe z firmami z Unii Europejskiej, jak i państw poza wspólnotą. Dzięki sprawnej i wykwalifikowanej kadrze jesteśmy w stanie dopasować nasze produkty do indywidualnych potrzeb.
                 </p>
         </main>
 
         <form action="" method="post">
             <span class="contact-form-headline">Skontaktuj się</span>
-            <input type="text" class="form-name" id="name-production" name="name" size="10" placeholder="Imię" autocomplete="on">
-            <input type="email" class="form-email" id="email-production" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
-            <input type="tel" class="form-phone" id="phone-production" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
-            <textarea type="text" class="form-message" id="message-production" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
-            <input type="submit" class="form-submit" id="submit-production" value="Wyślij">
+            <input type="text" name="name-production" class="form-name" placeholder="Imię" autocomplete="on">
+            <input type="email" name="email-production" class="form-email" placeholder="Adres mailowy*" autocomplete="on" required>
+            <input type="tel" name="tel-production" class="form-phone" placeholder="Nr telefonu" autocomplete="on">
+            <textarea type="text" name="message-production" class="form-message" placeholder="Treść*" required></textarea>
+            <button type="submit" name="submit-production" class="form-submit">Wyślij</button>
         </form>
     </section>
 
@@ -164,13 +166,13 @@
     <section id="welding" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg">
+                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">ZGRZEWANIE FOLII</h2>
             <div class="line line-right"></div>
         </div>
-        <img class="main-image-section" src="img/zgrzewanie-folii.jpg">
+        <img class="main-image-section" src="img/zgrzewanie-folii.jpg" alt="">
         <main>
             <p>
                 <b>Wkłady foliowe przystosowane do wielkogabarytowych worków BIG BAG to produkty wielokrotnego użytku.</b> Wkłady do BIG BAG-ów mają szerokie zastosowanie w przemyśle rolniczym, spożywczym oraz transportowym. Wkłady wykonane z folii często używane są do magazynowania nawozów, substancji pylistych, jak również kiszenia produktów spożywczych. Wkład umieszczony w kontenerze BIG BAG stanowi dodatkową ochronę dla przechowywanego czy transportowanego towaru. Chroni towar przed wilgocią, jak również pełni funkcję uszczelnienia szwów. 
@@ -308,13 +310,13 @@
 <section id="recycling" class="section-container">
     <div class="headline-with-logo">
         <div class="logo-horizontal-container">
-            <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg">
+            <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
         </div>
         <div class="line line-left"></div>
         <h2 class="headline-next-to-logo">RECYKLING FOLII</h2>
         <div class="line line-right"></div>
     </div>
-    <img class="main-image-section" src="img/recykling-folii.jpg">
+    <img class="main-image-section" src="img/recykling-folii.jpg" alt="">
     <main>
         <p>
             Recykling tworzyw sztucznych polega na właściwym przygotowaniu surowca do ponownego wykorzystania. W jego ramach różne rodzaje tworzyw są odpowiednio segregowane, oczyszczane i poddawane procesom, za których sprawą nadają się do ponownego wykorzystania. Wytworzone w ten sposób półprodukty - regranulaty są wykorzystywane do ponownego wykorzystania. Podstawową zaletą wykorzystania wysokojakościowych regranulatów wytworzonych z poprodukcyjnych odpadów tworzyw sztucznych daje bardzo duże możliwości w zakresie wykonywania z niego nowych, gotowych produktów, o jakości spełniającej wysokie wymagania odbiorców.
@@ -338,13 +340,13 @@
 <section id="buy-waste" class="section-container">
     <div class="headline-with-logo">
         <div class="logo-horizontal-container">
-            <img class="logo-horizontal" src="img/logo-h4t-trading-horizontal.svg">
+            <img class="logo-horizontal" src="img/logo-h4t-trading-horizontal.svg" alt="HEAD4TECH Trading">
         </div>
         <div class="line line-left"></div>
         <h2 class="headline-next-to-logo">ZAKUP ODPADU</h2>
         <div class="line line-right"></div>
     </div>
-    <img class="main-image-section" src="img/zakup-odpadu.jpg">
+    <img class="main-image-section" src="img/zakup-odpadu.jpg" alt="">
     <main>
         <p>
             Obsługujemy zakłady produkcyjne od których odbieramy i zagospodarowujemy tworzywa sztuczne, które początkowo poddawane są recyklingowi, a następnie stosowane w technologii gotowego wyrobu jakimi są worki, wkładki, rękawy foliowe itp. 
@@ -368,7 +370,7 @@
     <section id="news" class="section-container">
         <header class="headline-clear">
             <div class="line line-both"></div>
-            <h3 class="headline">AKTUALNOŚCI</h3>
+            <h2 class="headline">AKTUALNOŚCI</h2>
             <div class="line line-both"></div>
         </header>
         <p>
@@ -391,7 +393,7 @@
     <section id="contact">
         <header class="headline-clear">
             <div class="line line-both"></div>
-            <h3 class="headline">KONTAKT</h3>
+            <h2 class="headline">KONTAKT</h2>
             <div class="line line-both"></div>
         </header>
         <main class="contact-data">

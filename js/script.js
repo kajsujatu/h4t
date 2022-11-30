@@ -35,22 +35,24 @@ sectorThree.addEventListener('mouseover', setLogoTradingInSectorMiddle);
 sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
 
 
-const expandArticle = document.querySelectorAll('.expand-article-link')[0];
-
-expandArticle.addEventListener('click', function() {
-    document.querySelector('.article-content').classList.toggle('expand');
-    if (this.innerHTML.includes("Rozwiń")) this.innerHTML = "Zwiń &#9650;"
-    else if (this.innerHTML.includes("Zwiń")) this.innerHTML = "Rozwiń &#9660;"
-});
 
 
-const submitProduction = document.getElementById('submit-production');
+//const expandArticle = document.querySelectorAll('.expand-article-link')[0];
+//
+//expandArticle.addEventListener('click', function() {
+//    document.querySelector('.article-content').classList.toggle('expand');
+//    if (this.innerHTML.includes("Rozwiń")) this.innerHTML = "Zwiń &#9650;"
+//    else if (this.innerHTML.includes("Zwiń")) this.innerHTML = "Rozwiń &#9660;"
+//});
+//
 
-submitProduction.addEventListener('click', function() {
-   
-   
-})
-
+//const submitProduction = document.getElementById('submit-production');
+//
+//submitProduction.addEventListener('click', function() {
+//   
+//   
+//})
+//
 
 
 
@@ -69,7 +71,7 @@ submitProduction.addEventListener('click', function() {
             navigationLinks.setAttribute('data-visible', true);
             navMobile.setAttribute('aria-expanded', true);
             navigationLinks.style.visibility = 'visible';
-            navigationLinks.style.transform = 'translateY(-10%)';
+            navigationLinks.style.transform = 'translateX(0)';
             lineOne.style.transform = 'rotate(45deg)'; 
             lineTwo.style.transform = 'scaleY(0)'; 
             lineThree.style.transform = 'rotate(-45deg)';
@@ -77,6 +79,7 @@ submitProduction.addEventListener('click', function() {
         } else if (visibility === 'true') {
             navigationLinks.setAttribute('data-visible', false);
             navigationLinks.style.visibility = 'hidden';
+          //  navigationLinks.style.transform = 'translateX(110%)';
             navMobile.setAttribute('aria-expanded', false);
             navigationLinks.removeAttribute('style');
             lineOne.removeAttribute('style');
@@ -84,17 +87,7 @@ submitProduction.addEventListener('click', function() {
             lineThree.removeAttribute('style');
         }
 
-       
-       
-       
-
-      //  lineOne.classList.toggle('line1-rotated');
-      //  lineTwo.classList.toggle('line2-rotated');
-      //  lineThree.classList.toggle('line3-rotated');
-                        
-
-         //   navigationLinks.classList.toggle('mobile-links');
-     });
+    });
 
 
 // Propeller.js
@@ -114,71 +107,13 @@ submitProduction.addEventListener('click', function() {
                 this.inertia = .99;
             },
 
-            onRotate: function() {
-                
-                //    this.angle = -this.angle; //little dynamic from -angle to +angle
-
-           //     this.angle = -this.virtualAngle;  //little dynamic
-
-                                                             
-               // this.step.value === -(this.step.value);
-
-                //when opacity is reduced
-              // if (this.angle/this.step === 1) {
-              //     let styleFilterFive = sectorFive.getAttributeNode("style"); 
-              //     sectorFive.removeAttributeNode(styleFilterFive);
-              //     sectorOne.style.filter = "opacity()";
-              //     console.log('1. ' + this.angle);
-
-              // } else if (this.angle/this.step === 2) {
-              //     let styleFilterOne = sectorOne.getAttributeNode("style"); 
-              //     sectorOne.removeAttributeNode(styleFilterOne);
-              //     sectorTwo.style.filter = "opacity()";
-              //     console.log('2.' + this.angle);
-              //  
-              // } else if (this.angle/this.step === 3) {
-              //     let styleFilterTwo = sectorTwo.getAttributeNode("style"); 
-              //     sectorTwo.removeAttributeNode(styleFilterTwo);
-              //     sectorThree.style.filter = "opacity()";
-              //     console.log('3.' + this.angle);
-              // 
-              // } else if (this.angle/this.step === 4) {
-              //     let styleFilterThree = sectorThree.getAttributeNode("style"); 
-              //     sectorThree.removeAttributeNode(styleFilterThree);
-              //     sectorFour.style.filter = "opacity()";
-              //     console.log('4.' + this.angle);
-              //  
-              // } else if (this.angle/this.step === 5) {
-              //     let styleFilterFour = sectorFour.getAttributeNode("style"); 
-              //     sectorFour.removeAttributeNode(styleFilterFour);
-              //     sectorFive.style.filter = "opacity()";
-              //     console.log('5.' + this.angle);
-              //     
-              //     this.angle = 0;
-              //
-              // };
-
-              // 
-               },
-               });   
+        //    onRotate: function() {
+        //    },
+            
+        });   
    
             }, 5000);
         
-
-
-
-            //  onDragStop: function() {
-              //  console.log('stop');
-          //  },
-          //  onDragStart: function () {
-            //  document.getElementById('sector-middle').onRotated.setAttribute('style', 'transform: rotate(-100deg)');
-          //  }
-          
-          
-                  
-           
-        
-    
         
         const upButton = document.getElementsByClassName('button');
       
