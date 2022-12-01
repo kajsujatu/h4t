@@ -1,5 +1,6 @@
-const circularMenu = document.getElementById('circular-menu');
+// Circular menu - changing logo in the middle of circle
 
+const circularMenu = document.getElementById('circular-menu');
 const sectorMiddle = document.getElementById('sector-middle');
 const sectorOne = document.getElementById('sector-one');
 const sectorTwo = document.getElementById('sector-two');
@@ -8,18 +9,24 @@ const sectorFour = document.getElementById('sector-four');
 const sectorFive = document.getElementById('sector-five');
 
 function setLogoProductionInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(http://projektgrafika.cba.pl/h4t/wersja-testowa-2de/img/logo-h4t-produkcja.svg";
-    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";    
+   sectorMiddle.style.backgroundImage = "url(img/logo-h4t-produkcja.svg)";
+   sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
+   sectorMiddle.style.backgroundRepeat = "no-repeat";
+   sectorMiddle.style.backgroundPosition = "center";
 };
 
 function setLogoTradingInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(http://projektgrafika.cba.pl/h4t/wersja-testowa-2de/img/logo-h4t-trading.svg)";
-    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";    
+    sectorMiddle.style.backgroundImage = "url(img/logo-h4t-trading.svg)";
+    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
+    sectorMiddle.style.backgroundRepeat = "no-repeat";
+    sectorMiddle.style.backgroundPosition = "center";
 };
 
 function setBasicLogoInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(http://projektgrafika.cba.pl/h4t/wersja-testowa-2de/img/logo-h4t.svg)";
+    sectorMiddle.style.backgroundImage = "url(img/logo-h4t.svg)";
     sectorMiddle.style.backgroundSize = "min(6rem, 50%)";
+    sectorMiddle.style.backgroundRepeat = "no-repeat";
+    sectorMiddle.style.backgroundPosition = "center";
 };
 
 sectorOne.addEventListener('mouseover', setLogoProductionInSectorMiddle);
@@ -34,9 +41,6 @@ sectorTwo.addEventListener('mouseout', setBasicLogoInSectorMiddle);
 sectorThree.addEventListener('mouseover', setLogoTradingInSectorMiddle);
 sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
 
-
-
-
 //const expandArticle = document.querySelectorAll('.expand-article-link')[0];
 //
 //expandArticle.addEventListener('click', function() {
@@ -46,52 +50,33 @@ sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
 //});
 //
 
-//const submitProduction = document.getElementById('submit-production');
-//
-//submitProduction.addEventListener('click', function() {
-//   
-//   
-//})
-//
+// Hamburger Menu
+const navigationLinks = document.getElementById('navigation-links');
+const navMobile = document.getElementById('nav-mobile');
+  
+navMobile.addEventListener('click', () => {
+   const visibility = navigationLinks.getAttribute('data-visible');
 
+   if (visibility === 'false') { 
+       navigationLinks.setAttribute('data-visible', true);
+       navMobile.setAttribute('aria-expanded', true);
+    } else if (visibility === 'true') {
+       navigationLinks.setAttribute('data-visible', false);
+       navMobile.setAttribute('aria-expanded', false);
+    }
+});
 
-
-    const navigationLinks = document.getElementById('navigation-links');
-    const navMobile = document.getElementById('nav-mobile');
-    const lineOne = document.querySelectorAll('.line1')[0];
-    const lineTwo = document.querySelectorAll('.line2')[0];
-    const lineThree = document.querySelectorAll('.line3')[0];
-
-
-    navMobile.addEventListener('click', () => {
-       // navMobile.classList.toggle('nav-mobile-active')
-       const visibility = navigationLinks.getAttribute('data-visible');
-
-        if (visibility === 'false') { 
-            navigationLinks.setAttribute('data-visible', true);
-            navMobile.setAttribute('aria-expanded', true);
-            navigationLinks.style.visibility = 'visible';
-            navigationLinks.style.transform = 'translateX(0)';
-            lineOne.style.transform = 'rotate(45deg)'; 
-            lineTwo.style.transform = 'scaleY(0)'; 
-            lineThree.style.transform = 'rotate(-45deg)';
-
-        } else if (visibility === 'true') {
-            navigationLinks.setAttribute('data-visible', false);
-            navigationLinks.style.visibility = 'hidden';
-          //  navigationLinks.style.transform = 'translateX(110%)';
-            navMobile.setAttribute('aria-expanded', false);
-            navigationLinks.removeAttribute('style');
-            lineOne.removeAttribute('style');
-            lineTwo.removeAttribute('style');
-            lineThree.removeAttribute('style');
-        }
-
-    });
-
+// Stop Animations During Window Resizing - mostly for mobile navigation
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});
 
 // Propeller.js
-
     setTimeout(() => {
         
         new Propeller(document.getElementById('circular-menu'), {
@@ -101,27 +86,17 @@ sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
             stepTransitionTime: 1000,
             stepTransitionEasing: "ease-in-out",
             onDragStop: function() {
-                this.inertia = .99;
-            },
+                        this.inertia = .99;
+                        },
             onDragStart: function () {
-                this.inertia = .99;
-            },
-
-        //    onRotate: function() {
-        //    },
-            
+                        this.inertia = .99;
+                        },
+        //  onRotate:            
         });   
    
-            }, 5000);
-        
-        
-        const upButton = document.getElementsByClassName('button');
-      
-                
-        const sectorOutside = document.getElementById('sector-outside');
+    }, 5000);
 
-
-
+// Start animation of circular menu when user start to see it
      function showLibraryInfo() {
          if (window.libInfoShown !== true) {
              var windStuff = document.getElementsByClassName('wind');
@@ -137,3 +112,61 @@ sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
              window.libInfoShown = true;
          }
      }
+
+
+     const listContainedExpandedList = document.getElementById('ol-welding-container-steps').children;
+     const triangleExpandList = document.querySelector('.triangle-to-expand-list');
+     const listExpanded = document.querySelector('.list-expanded');
+
+
+   //  for (let i=0; i<listContainedExpandedList.children.length; i++) {
+
+        console.log(listContainedExpandedList);
+
+        console.log(listContainedExpandedList[0]);
+        console.log(listContainedExpandedList[1]);
+        console.log(triangleExpandList);
+        console.log(listExpanded);
+
+
+
+   //    for (let i=0; i<listContainedExpandedList.length; i++) {
+
+   //        triangleExpandList.addEventListener('click', () => {
+
+   //            console.log(listContainedExpandedList[i]);
+
+   //             const visibility = listExpanded.getAttribute('data-visible');
+   //         
+   //         if (visibility === 'false') { 
+   //             listExpanded.setAttribute('data-visible', true);
+   //          } else if (visibility === 'true') {
+   //             listExpanded.setAttribute('data-visible', false);
+   //          }
+
+
+   //        });
+   //    };
+        
+
+  //     const makeVisible = function() {
+  //         const visibility = listExpanded.getAttribute('data-visible');
+ 
+  //         if (visibility === 'false') { 
+  //             listExpanded.setAttribute('data-visible', true);
+  //          } else if (visibility === 'true') {
+  //             listExpanded.setAttribute('data-visible', false);
+  //          }
+  //      };      
+
+
+
+  //     triangleExpandList.addEventListener('click', makeVisible);
+
+
+
+
+
+
+
+

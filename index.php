@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
-    <meta name="description" content="Tworzymy nowoczesne produkty z materiałów pochodzących z recyklingu. Jesteśmy liderem w branży worków U-Liner, Bootle Neck, Open Top."/>
+    <meta name="description" content="Tworzymy nowoczesne produkty z materiałów pochodzących z recyklingu. Jesteśmy liderem w branży worków U-Liner, Bootle Neck, Open Top.">
     <title>HEAD4TECH</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -39,14 +39,14 @@
         <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z&nbsp;recyklingu</h1>
         <div id="button-down-container">
             <span>Poznaj nasz sposób działania</span>
-            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg" alt=""></img></a>
+            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg" alt=""></a>
         </div>    
     </section>
 
     <span id="mark-for-button-down-arrow"></span>
 
     <!-- CIRCULAR MENU SECTION -->
-    <section id="circular-menu-section">
+    <div id="circular-menu-section">
         <nav id="circular-nav">
             <div id="sector-middle"></div>
             <ul id="circular-menu">
@@ -66,8 +66,8 @@
                         </defs>
                         <text>
                             <textPath xlink:href="#circle">
-                            PRODUKCJA FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp; ZGRZEWANIE FOLII &nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp;&nbsp; DOSTAWA FOLII &nbsp;&nbsp;&nbsp;&nbsp;&#8594
-                            &nbsp;&nbsp;&nbsp;&nbsp; ZAKUP ODPADU &nbsp;&nbsp;&nbsp;&nbsp;&#8594&nbsp;&nbsp;&nbsp; RECYKLING FOLII &nbsp;&nbsp;&#8594
+                            PRODUKCJA FOLII &nbsp;&nbsp;&#8594;&nbsp;&nbsp; ZGRZEWANIE FOLII &nbsp;&nbsp;&#8594;&nbsp;&nbsp;&nbsp;&nbsp; DOSTAWA FOLII &nbsp;&nbsp;&nbsp;&nbsp;&#8594;
+                            &nbsp;&nbsp;&nbsp;&nbsp; ZAKUP ODPADU &nbsp;&nbsp;&nbsp;&nbsp;&#8594;&nbsp;&nbsp;&nbsp; RECYKLING FOLII &nbsp;&nbsp;&#8594;
                             </textPath>
                         </text>
                     </svg>
@@ -84,7 +84,7 @@
                          z"/>
             </clipPath>
         </svg>
-    </section>
+    </div>
 
     <!-- PRODUCTION SECTION -->
     <section id="production" class="section-container">
@@ -97,9 +97,9 @@
             <div class="line line-right"></div>
         </div>
         <img class="main-image-section" src="img/produkcja-folii.jpg" alt="">
-        <main>
+        <div class="section-container-for-text">
             <ol id="ol-production-container" class="ol-container">
-                <li><span class="list-item-headline">KIM JESTEŚMY</span>
+                <li><h3 class="list-item-headline">KIM JESTEŚMY</h3>
                     <ul>
                         <li>
                             <b>Liderem w branży worków U-Liner, Bootle Neck, Open Top.</b> W swojej ofercie mamy również produkty dla branży meblarskiej, chemicznej, spożywczej.
@@ -118,7 +118,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">CO ROBIMY</span>
+                <li><h3 class="list-item-headline">CO ROBIMY</h3>
                     <ul>
                         <li>
                             <b>Niezawodne opakowania o skomplikowanych nazwach, U-Liner, Bootle-Neck, Open Top.</b> To nic innego jak ogromne worki foliowe doskonałe jako bariera przed wilgocią, wodą, słońcem, brudem, pyłem i różnego rodzaju zanieczyszczeniami.
@@ -128,7 +128,7 @@
                         </li>
                     </ul>
                 </li> 
-                <li><span class="list-item-headline">CO NAS WYRÓŻNIA</span> 
+                <li><h3 class="list-item-headline">CO NAS WYRÓŻNIA</h3> 
                     <ul>
                         <li>
                             Tworzymy team, w którym jesteśmy dumni z każdego klienta, z pobitych rekordów, z wizyt klientów w naszej firmie, ze wszystkich stałych i nowych zleceń, z nawet najmniejszej redukcji odpadu produkcyjnego! Wspólnie, począwszy od Pomocnika Operatora skończywszy na Dyrektorze Generalnym, pracujemy, by nasza misja <b>STANIA SIĘ DOSTAWCĄ PIERWSZEGO WYBORU</b>, była nie tylko hasłem, ale ideą, która pomaga dostarczać klientom dobrej jakości worki, rozwiązania magazynowe, ewidencyjne i technologiczne z zakresu prowadzonej działalności.
@@ -150,14 +150,15 @@
                 <p>             
                     Mamy bogate doświadczenie biznesowe z firmami z Unii Europejskiej, jak i państw poza wspólnotą. Dzięki sprawnej i wykwalifikowanej kadrze jesteśmy w stanie dopasować nasze produkty do indywidualnych potrzeb.
                 </p>
-        </main>
+        </div>
 
-        <form action="" method="post">
+        <!-- FORM FOR PRODUCTION -->
+        <form action="index.php" method="post">
             <span class="contact-form-headline">Skontaktuj się</span>
             <input type="text" name="name-production" class="form-name" placeholder="Imię" autocomplete="on">
             <input type="email" name="email-production" class="form-email" placeholder="Adres mailowy*" autocomplete="on" required>
             <input type="tel" name="tel-production" class="form-phone" placeholder="Nr telefonu" autocomplete="on">
-            <textarea type="text" name="message-production" class="form-message" placeholder="Treść*" required></textarea>
+            <textarea name="message-production" class="form-message" placeholder="Treść*" required></textarea>
             <button type="submit" name="submit-production" class="form-submit">Wyślij</button>
         </form>
     </section>
@@ -173,7 +174,7 @@
             <div class="line line-right"></div>
         </div>
         <img class="main-image-section" src="img/zgrzewanie-folii.jpg" alt="">
-        <main>
+        <div class="section-container-for-text">
             <p>
                 <b>Wkłady foliowe przystosowane do wielkogabarytowych worków BIG BAG to produkty wielokrotnego użytku.</b> Wkłady do BIG BAG-ów mają szerokie zastosowanie w przemyśle rolniczym, spożywczym oraz transportowym. Wkłady wykonane z folii często używane są do magazynowania nawozów, substancji pylistych, jak również kiszenia produktów spożywczych. Wkład umieszczony w kontenerze BIG BAG stanowi dodatkową ochronę dla przechowywanego czy transportowanego towaru. Chroni towar przed wilgocią, jak również pełni funkcję uszczelnienia szwów. 
             </p>
@@ -251,7 +252,7 @@
                 Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
             </p>
             <ol id="ol-welding-container-steps">
-                <li><span class="list-item-headline">Krok pierwszy — produkcja rękawa</span>
+                <li><h4 class="list-item-headline">Krok pierwszy — produkcja rękawa</h4>
                     <ul>
                         <li>trójwarstwowa linia do rozdmuchu folii</li>
                         <li>automatyczny system kontroli grubości</li>
@@ -259,112 +260,116 @@
                         <li>kontrola prowadzenia wstęgi</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok drugi — badanie grubości</span>
+                <li><h4 class="list-item-headline">Krok drugi — badanie grubości</h4>
                     <ul>
                         <li>na każdej rolce przeprowadzamy pomiar średniej grubości folii w warunkach laboratoryjnych</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok trzeci — badanie na wydłużenie wzdłużne i poprzeczne</span>
+                <li><h4 class="list-item-headline">Krok trzeci — badanie na wydłużenie wzdłużne i poprzeczne</h4>
                     <ul>
                         <li>każdą wyprodukowaną rolkę sprawdzamy pod względem składu oraz pod kątem rozciągliwości</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok czwarty — badanie udarności</span>
+                <li><h4 class="list-item-headline">Krok czwarty — badanie udarności</h4>
                     <ul>
                         <li>na urządzeniu do sprawdzania DART DROP badamy jaką siłę wytrzyma nasza folia w teście symulującym przebicie</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok piąty — zgrzewanie worków</span>
+                <li><h4 class="list-item-headline">Krok piąty — zgrzewanie worków</h4>
                     <ul>
                         <li>produkcja worka na impulsowej zgrzewarce, z wydajnością do 20 tys. worków U-liner oraz Bootle Neck dziennie</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok szósty — wytrzymałość zgrzewów</span>
+                <li><h4 class="list-item-headline">Krok szósty — wytrzymałość zgrzewów</h4>
                     <ul>
                         <li>test na zaprojektowanej przez naszych specjalistów maszynie do kontroli wytrzymałości zgrzewu</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok siódmy — kontrola jakości</span>
+                <li><h4 class="list-item-headline">Krok siódmy — kontrola jakości</h4>
                     <ul>
                         <li>każdy nasz worek jest przeglądany przez pracowników Działu Kontroli Jakości</li>
                     </ul>
                 </li>
-                <li><span class="list-item-headline">Krok ósmy — odpowiednie opakowanie</span>
+                <li><h4 class="list-item-headline">Krok ósmy — odpowiednie opakowanie</h4>
                     <ul>
                         <li>nasze worki transportowane są w specjalnie zaprojektowanych kartonowych BOX-ach, dzięki czemu eliminujemy ich uszkodzenie, zabrudzenie, otarcia, zamoknięcia</li>
                     </ul>
                 </li>
             </ol>
-        </main>
-        <form action="" method="post" id="contact-form-welding">
+        </div>
+
+        <!-- FORM FOR WELDING -->
+        <form action="index.php" method="post">
             <span class="contact-form-headline">Skontaktuj się</span>
-            <input type="text" class="form-name" id="name-welding" name="name" size="10" placeholder="Imię" autocomplete="on">
-            <input type="email" class="form-email" id="email-welding" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
-            <input type="tel" class="form-phone" id="phone-welding" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
-            <textarea type="text" class="form-message" id="message-welding" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
-            <input type="submit" class="form-submit" id="submit-welding" value="Wyślij">
+            <input type="text" name="name-welding" class="form-name" placeholder="Imię" autocomplete="on">
+            <input type="email" name="email-welding" class="form-email" placeholder="Adres mailowy*" autocomplete="on" required>
+            <input type="tel" name="tel-welding" class="form-phone" placeholder="Nr telefonu" autocomplete="on">
+            <textarea name="message-welding" class="form-message" placeholder="Treść*" required></textarea>
+            <button type="submit" name="submit-welding" class="form-submit">Wyślij</button>
         </form>
     </section>
 
-<!-- RECYCLING SECTION -->
-<section id="recycling" class="section-container">
-    <div class="headline-with-logo">
-        <div class="logo-horizontal-container">
-            <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+    <!-- RECYCLING SECTION -->
+    <section id="recycling" class="section-container">
+        <div class="headline-with-logo">
+            <div class="logo-horizontal-container">
+                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+            </div>
+            <div class="line line-left"></div>
+            <h2 class="headline-next-to-logo">RECYKLING FOLII</h2>
+            <div class="line line-right"></div>
         </div>
-        <div class="line line-left"></div>
-        <h2 class="headline-next-to-logo">RECYKLING FOLII</h2>
-        <div class="line line-right"></div>
-    </div>
-    <img class="main-image-section" src="img/recykling-folii.jpg" alt="">
-    <main>
-        <p>
-            Recykling tworzyw sztucznych polega na właściwym przygotowaniu surowca do ponownego wykorzystania. W jego ramach różne rodzaje tworzyw są odpowiednio segregowane, oczyszczane i poddawane procesom, za których sprawą nadają się do ponownego wykorzystania. Wytworzone w ten sposób półprodukty - regranulaty są wykorzystywane do ponownego wykorzystania. Podstawową zaletą wykorzystania wysokojakościowych regranulatów wytworzonych z poprodukcyjnych odpadów tworzyw sztucznych daje bardzo duże możliwości w zakresie wykonywania z niego nowych, gotowych produktów, o jakości spełniającej wysokie wymagania odbiorców.
-        </p>
-        <p>
-            W ramach naszej działalności jesteśmy zainteresowani odpadami poprodukcyjnymi PE, PP, PET oraz tworzywami technicznymi ABS, PC, PS. Doświadczenie, wykwalifikowany personel oraz kontrola jakości pozwala nam na uzyskanie regranulatów o paramtetrach jakościowych umożliwiających wykorzystanie go do produkcji nowych produktów.
-        </p>
-    </main>
-    <form action="" method="post" id="contact-form-recyckling">
-        <span class="contact-form-headline">Skontaktuj się</span>
-        <input type="text" class="form-name" id="name-recyckling" name="name" size="10" placeholder="Imię" autocomplete="on">
-        <input type="email" class="form-email" id="email-recyckling" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
-        <input type="tel" class="form-phone" id="phone-recyckling" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
-        <textarea type="text" class="form-message" id="message-recyckling" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
-        <input type="submit" class="form-submit" id="submit-recyckling" value="Wyślij">
-    </form>
-</section>
-
-
-<!-- BUY WASTE SECTION -->
-<section id="buy-waste" class="section-container">
-    <div class="headline-with-logo">
-        <div class="logo-horizontal-container">
-            <img class="logo-horizontal" src="img/logo-h4t-trading-horizontal.svg" alt="HEAD4TECH Trading">
+        <img class="main-image-section" src="img/recykling-folii.jpg" alt="">
+        <div class="section-container-for-text">
+            <p>
+                Recykling tworzyw sztucznych polega na właściwym przygotowaniu surowca do ponownego wykorzystania. W jego ramach różne rodzaje tworzyw są odpowiednio segregowane, oczyszczane i poddawane procesom, za których sprawą nadają się do ponownego wykorzystania. Wytworzone w ten sposób półprodukty - regranulaty są wykorzystywane do ponownego wykorzystania. Podstawową zaletą wykorzystania wysokojakościowych regranulatów wytworzonych z poprodukcyjnych odpadów tworzyw sztucznych daje bardzo duże możliwości w zakresie wykonywania z niego nowych, gotowych produktów, o jakości spełniającej wysokie wymagania odbiorców.
+            </p>
+            <p>
+                W ramach naszej działalności jesteśmy zainteresowani odpadami poprodukcyjnymi PE, PP, PET oraz tworzywami technicznymi ABS, PC, PS. Doświadczenie, wykwalifikowany personel oraz kontrola jakości pozwala nam na uzyskanie regranulatów o paramtetrach jakościowych umożliwiających wykorzystanie go do produkcji nowych produktów.
+            </p>
         </div>
-        <div class="line line-left"></div>
-        <h2 class="headline-next-to-logo">ZAKUP ODPADU</h2>
-        <div class="line line-right"></div>
-    </div>
-    <img class="main-image-section" src="img/zakup-odpadu.jpg" alt="">
-    <main>
-        <p>
-            Obsługujemy zakłady produkcyjne od których odbieramy i zagospodarowujemy tworzywa sztuczne, które początkowo poddawane są recyklingowi, a następnie stosowane w technologii gotowego wyrobu jakimi są worki, wkładki, rękawy foliowe itp. 
-        </p>
-        <p>
-            Interesują nas odpady poprodukcyjne: <b>LDPE, LLDPE, HDPE, PP, BOPP, OPP.</b>
-        </p>
-    </main>
-    <form action="" method="post" id="contact-form-buy-waste">
-        <span class="contact-form-headline">Skontaktuj się</span>
-        <input type="text" class="form-name" id="name-buy-waste" name="name" size="10" placeholder="Imię" autocomplete="on">
-        <input type="email" class="form-email" id="email-buy-waste" name="mail" required  size="10" placeholder="Adres mailowy*" autocomplete="on">
-        <input type="tel" class="form-phone" id="phone-buy-waste" name="phone" size="10" placeholder="Nr telefonu" autocomplete="on">
-        <textarea type="text" class="form-message" id="message-buy-waste" name="message" required rows="5" cols="30" placeholder="Treść*"></textarea>
-        <input type="submit" class="form-submit" id="submit-buy-waste" value="Wyślij">
-    </form>
-</section>
 
+        <!-- FORM FOR RECYCLING -->
+         <form action="index.php" method="post">
+             <span class="contact-form-headline">Skontaktuj się</span>
+             <input type="text" name="name-recycling" class="form-name" placeholder="Imię" autocomplete="on">
+             <input type="email" name="email-recycling" class="form-email" placeholder="Adres mailowy*" autocomplete="on" required>
+             <input type="tel" name="tel-recycling" class="form-phone" placeholder="Nr telefonu" autocomplete="on">
+             <textarea name="message-recycling" class="form-message" placeholder="Treść*" required></textarea>
+             <button type="submit" name="submit-recycling" class="form-submit">Wyślij</button>
+         </form>
+    </section>
+
+    <!-- BUY WASTE SECTION -->
+    <section id="buy-waste" class="section-container">
+        <div class="headline-with-logo">
+            <div class="logo-horizontal-container">
+                <img class="logo-horizontal" src="img/logo-h4t-trading-horizontal.svg" alt="HEAD4TECH Trading">
+            </div>
+            <div class="line line-left"></div>
+            <h2 class="headline-next-to-logo">ZAKUP ODPADU</h2>
+            <div class="line line-right"></div>
+        </div>
+        <img class="main-image-section" src="img/zakup-odpadu.jpg" alt="">
+        <div class="section-container-for-text">
+            <p>
+                Obsługujemy zakłady produkcyjne od których odbieramy i zagospodarowujemy tworzywa sztuczne, które początkowo poddawane są recyklingowi, a następnie stosowane w technologii gotowego wyrobu jakimi są worki, wkładki, rękawy foliowe itp. 
+            </p>
+            <p>
+                Interesują nas odpady poprodukcyjne: <b>LDPE, LLDPE, HDPE, PP, BOPP, OPP.</b>
+            </p>
+        </div>
+
+        <!-- FORM FOR BUY WASTE -->
+        <form action="index.php" method="post">
+            <span class="contact-form-headline">Skontaktuj się</span>
+            <input type="text" name="name-buy-waste" class="form-name" placeholder="Imię" autocomplete="on">
+            <input type="email" name="email-buy-waste" class="form-email" placeholder="Adres mailowy*" autocomplete="on" required>
+            <input type="tel" name="tel-buy-waste" class="form-phone" placeholder="Nr telefonu" autocomplete="on">
+            <textarea name="message-buy-waste" class="form-message" placeholder="Treść*" required></textarea>
+            <button type="submit" name="submit-buy-waste" class="form-submit">Wyślij</button>
+        </form>
+    </section>
 
     <!-- NEWS SECTION -->
     <section id="news" class="section-container">
@@ -396,7 +401,7 @@
             <h2 class="headline">KONTAKT</h2>
             <div class="line line-both"></div>
         </header>
-        <main class="contact-data">
+        <div class="contact-data">
             <div>
                 <span class="contact-form-headline">Produkcja:</span>
                 <p class="name">Rafał Dąbek</p>
@@ -438,7 +443,7 @@
                 <p>ul. Kalinowa 29</p>
                 <p>83-031 Kleszczewko</p>
             </div>    
-        </main>
+        </div>
     </section>
 
     <!-- FOOTER -->
@@ -451,7 +456,8 @@
                 <span>NIP: 6040228072</span>
                 <span>KRS: 0000943944</span>
             </div>
-        </footer>
+        </div> 
+    </footer>
 
     <script src="js/propeller.min.js" async></script>
 

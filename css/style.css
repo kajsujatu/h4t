@@ -50,7 +50,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     display: inline;
 }
 
@@ -83,6 +84,11 @@ ul {
 .center-text {
     text-align: center;
 }
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
 
 /* **************** HEADER **************** */
 
@@ -239,8 +245,12 @@ ul {
     height: 100%;
     top: 0;
     left: 0;
-    cursor: grab;
+   /* cursor: grab; */
  }
+
+#circular-menu :not(.button, .button-link) {
+    pointer-events: none;
+}
 
 #circular-menu .button { 
     position: absolute;
@@ -305,14 +315,14 @@ ul {
     padding-top: min(12.5rem, 30%);
     border-radius: 50%;
     z-index: 99;
-    background-image: url('http://projektgrafika.cba.pl/h4t/wersja-testowa-2de/img/logo-h4t.svg');
+    background-image: url('../img/logo-h4t.svg');
     background-size: min(6rem, 50%);
     background-repeat: no-repeat;
     background-position: center;
     filter: drop-shadow(.01rem .01rem 2rem #8DC3F5);
 }
 
-#sector-one { /* RECYKLING */
+#sector-one { /* RECYKLING FOLII */
     transform: rotate(324deg);
 }
 
@@ -320,7 +330,7 @@ ul {
     background-image: url('../img/circular-menu-button-recykling.png');
 }
 
-#sector-two { /* ZAKUP */
+#sector-two { /* ZAKUP ODPADU */
     transform: rotate(252deg);
 }
 
@@ -328,7 +338,7 @@ ul {
     background-image: url('../img/circular-menu-button-zakup.png');
 }
 
-#sector-three { /* DOSTAWA */
+#sector-three { /* DOSTAWA FOLII */
     transform: rotate(180deg);
 }
 
@@ -336,7 +346,7 @@ ul {
     background-image: url('../img/circular-menu-button-dostawa.png');
 }
 
-#sector-four { /* ZGRZEWANIE */
+#sector-four { /* ZGRZEWANIE FOLII */
     transform: rotate(108deg);
 }
 
@@ -344,7 +354,7 @@ ul {
     background-image: url('../img/circular-menu-button-zgrzewanie.png');
 }
  
-#sector-five { /* PRODUKCJA */
+#sector-five { /* PRODUKCJA FOLII */
     transform: rotate(36deg);
 }
 
@@ -397,7 +407,7 @@ ul {
     100% { transform: scale(1) rotate(323deg)}
 }
 
-/* **************** COMMON STYLES FOR SECTORS **************** */
+/* **************** COMMON STYLES FOR SECTIONS **************** */
 
 .section-container {
     margin: 0 0 3rem 0;
@@ -491,6 +501,20 @@ ol ul ul {
     color: var(--production-color);
 }
 
+.triangle-to-expand-list {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.list-expanded {
+    display: none;
+}
+
+.list-expanded[data-visible="true"] {
+    display: block;
+}
+
+
 /* **************** MAIN IMAGE SECTION **************** */
 
 .main-image-section {
@@ -498,10 +522,8 @@ ol ul ul {
     border-radius: 1rem;
 }
 
-#production > main,
-#production > form,
-#welding > main,
-#welding > form {
+form,
+.section-container-for-text {
     flex: 0 1 80%;
 }
 
@@ -955,7 +977,6 @@ footer #footer-container a:hover::after {
     }
 
     #header-top #navbar nav #navigation-links {
-        visibility: hidden;
         position: absolute;
         width: 50%;
         top: 6rem;
@@ -971,18 +992,22 @@ footer #footer-container a:hover::after {
         filter: drop-shadow(-.5rem 1rem .5rem #d1e9ff7e);
     }
 
-    .line1-rotated {
+    #header-top #navbar nav #navigation-links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    #nav-mobile[aria-expanded="true"] > .line1 {
         transform: rotate(45deg);
     }
 
-    .line2-rotated {
+    #nav-mobile[aria-expanded="true"] > .line2 {
         transform: scaleY(0);
     }
 
-    .line3-rotated {
+    #nav-mobile[aria-expanded="true"] > .line3 {
         transform: rotate(-45deg);
     }
-
+ 
     #main-section {
         height: 35rem;
     }
@@ -1033,6 +1058,5 @@ footer #footer-container a:hover::after {
     .button:hover .button-link,
     .button-link:focus  {
        font-size: 100%;
-
     }
 }
