@@ -24,7 +24,7 @@ function setLogoTradingInSectorMiddle() {
 
 function setBasicLogoInSectorMiddle() {
     sectorMiddle.style.backgroundImage = "url(img/logo-h4t.svg)";
-    sectorMiddle.style.backgroundSize = "min(6rem, 50%)";
+    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
     sectorMiddle.style.backgroundRepeat = "no-repeat";
     sectorMiddle.style.backgroundPosition = "center";
 };
@@ -91,9 +91,9 @@ window.addEventListener("resize", () => {
             onDragStart: function () {
                         this.inertia = .99;
                         },
-        //  onRotate:            
+        //  onRotate:
         });   
-   
+
     }, 5000);
 
 // Start animation of circular menu when user start to see it
@@ -113,56 +113,40 @@ window.addEventListener("resize", () => {
          }
      }
 
+// Change main logo at the top
+     let images = ['img/logo-h4t-horizontal.svg', 'img/logo-h4t-produkcja-horizontal.svg', 'img/logo-h4t-trading-horizontal.svg'];
 
-     const listContainedExpandedList = document.getElementById('ol-welding-container-steps').children;
-     const triangleExpandList = document.querySelector('.triangle-to-expand-list');
-     const listExpanded = document.querySelector('.list-expanded');
+     let index = 0;
+     const imgElement = document.querySelector('#logo-top');
+     
+     function change() {
+        imgElement.src = images[index];
+        index > 1 ? index = 0 : index++;
+     }
 
-
-   //  for (let i=0; i<listContainedExpandedList.children.length; i++) {
-
-        console.log(listContainedExpandedList);
-
-        console.log(listContainedExpandedList[0]);
-        console.log(listContainedExpandedList[1]);
-        console.log(triangleExpandList);
-        console.log(listExpanded);
-
-
-
-   //    for (let i=0; i<listContainedExpandedList.length; i++) {
-
-   //        triangleExpandList.addEventListener('click', () => {
-
-   //            console.log(listContainedExpandedList[i]);
-
-   //             const visibility = listExpanded.getAttribute('data-visible');
-   //         
-   //         if (visibility === 'false') { 
-   //             listExpanded.setAttribute('data-visible', true);
-   //          } else if (visibility === 'true') {
-   //             listExpanded.setAttribute('data-visible', false);
-   //          }
+     window.onload = function() {
+         setInterval(change, 8000);
+     };
 
 
-   //        });
-   //    };
-        
-
-  //     const makeVisible = function() {
-  //         const visibility = listExpanded.getAttribute('data-visible');
- 
-  //         if (visibility === 'false') { 
-  //             listExpanded.setAttribute('data-visible', true);
-  //          } else if (visibility === 'true') {
-  //             listExpanded.setAttribute('data-visible', false);
-  //          }
-  //      };      
-
-
-
-  //     triangleExpandList.addEventListener('click', makeVisible);
-
+// Expand list - not use anymore but save code for future
+//     const listContainedExpandedList = document.getElementById('ol-welding-container-steps').children;
+//     const triangleExpandList = document.querySelectorAll('.triangle-to-expand-list');
+//     const listExpanded = document.querySelectorAll('.list-expanded');
+//
+//     for (let i=0; i<listContainedExpandedList.length; i++) {
+//        triangleExpandList[i].addEventListener('click', () => {
+//        const visibility = listExpanded[i].getAttribute('data-visible');
+//        
+//        if (visibility === 'false') { 
+//            listExpanded[i].setAttribute('data-visible', true);
+//            triangleExpandList[i].classList.add('triangle-active');
+//         } else if (visibility === 'true') {
+//            listExpanded[i].setAttribute('data-visible', false);
+//            triangleExpandList[i].classList.remove('triangle-active');
+//         }
+//    });
+//};
 
 
 

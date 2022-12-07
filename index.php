@@ -15,14 +15,34 @@
     <!-- HEADER -->
     <header id="header-top">
         <div id="navbar">
-            <a href="#"><img src="img/logo-h4t-horizontal.svg" id="logo-top" alt="HEAD4TECH"></a>
+            <!-- LOGO -->
+            <a href="#">
+                <img src="img/logo-h4t-horizontal.svg" id="logo-top" alt="HEAD4TECH">
+            </a>
+
+            <!-- NAVIGATION -->
             <nav>
                 <ul id="navigation-links" data-visible="false">
-                    <li><a href="#production">Produkcja</a></li>
-                    <li><a href="#buy-waste">Trading</a></li>
-                    <li><a href="#news">Aktualności</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
+                    <li>
+                        <a href="#produkcja">
+                            Produkcja
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#trading">
+                            Trading
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#aktualności">
+                            Aktualności
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#kontakt">Kontakt</a>
+                    </li>
                 </ul>
+                <!-- BUTTON HAMBURGER ON MOBILE -->
                 <button id="nav-mobile" aria-controls="navigation-links" aria-expanded="false">
                     <span class="sr-only">Menu</span>
                     <span class="menu-line line1"></span>
@@ -31,31 +51,52 @@
                 </button>
             </nav>
             <!-- <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div> -->
-        </div>    
+        </div>
     </header>
-    
+
     <!-- MAIN SECTION -->
     <section id="main-section">
         <h1 id="main-headline">Tworzymy nowoczesne produkty<br> z materiałów pochodzących z&nbsp;recyklingu</h1>
         <div id="button-down-container">
             <span>Poznaj nasz sposób działania</span>
-            <a href="#mark-for-button-down-arrow"><img id="button-down-arrow" src="img/button-down-arrow.svg" alt=""></a>
-        </div>    
+            <a href="#menu"><img id="button-down-arrow" src="img/button-down-arrow.svg" alt=""></a>
+        </div>
     </section>
 
-    <span id="mark-for-button-down-arrow"></span>
-
     <!-- CIRCULAR MENU SECTION -->
+    <span id="menu" class="hidden-mark-for-navigation"></span>
+
     <div id="circular-menu-section">
         <nav id="circular-nav">
             <div id="sector-middle"></div>
             <ul id="circular-menu">
-                <li class="button" id="sector-one"><a class="button-link" href="#recycling">POZNAJ PROCES</a></li>
-                <li class="button" id="sector-two"><a class="button-link" href="#buy-waste">POZNAJ PROCES</a></li>
-                <li class="button" id="sector-three"><a class="button-link" href="#">POZNAJ PROCES</a></li>
-                <li class="button" id="sector-four"><a class="button-link" href="#welding">POZNAJ PROCES</a></li>
-                <li class="button" id="sector-five"><a class="button-link" href="#production">POZNAJ PROCES</a></li>
+                <li class="button" id="sector-one">
+                    <a class="button-link" href="#recycling">
+                        POZNAJ PROCES <span class="sr-only">RECYKLINGU</span>
+                    </a>
+                </li>
+                <li class="button" id="sector-two">
+                    <a class="button-link" href="#buy-waste">
+                        POZNAJ PROCES <span class="sr-only">ZAKUPU ODPADU</span>
+                    </a>
+                </li>
+                <li class="button" id="sector-three">
+                    <a class="button-link" href="#">
+                        POZNAJ PROCES <span class="sr-only">DOSTAWY FOLII</span>
+                    </a>
+                </li>
+                <li class="button" id="sector-four">
+                    <a class="button-link" href="#welding">
+                        POZNAJ PROCES <span class="sr-only">ZGRZEWANIA FOLII</span>
+                    </a>
+                </li>
+                <li class="button" id="sector-five">
+                    <a class="button-link" href="#production">
+                        POZNAJ PROCES <span class="sr-only">PRODUKCJI FOLII</span>
+                    </a>
+                </li>
                 <li id="sector-outside">
+
                     <!-- PATH FOR TEXT ON OUTSIDE OF CIRCLE -->
                     <svg viewBox="0 0 100 100" id="text-on-circle-outside">
                         <defs>
@@ -71,9 +112,9 @@
                             </textPath>
                         </text>
                     </svg>
-                </li>      
+                </li>
             </ul>
-        </nav>      
+        </nav>
 
         <!-- PATH FOR EACH SECTOR -->
         <svg width="0" height="0">
@@ -87,6 +128,8 @@
     </div>
 
     <!-- PRODUCTION SECTION -->
+    <span id="produkcja" class="hidden-mark-for-navigation"></span>
+
     <section id="production" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
@@ -96,19 +139,19 @@
             <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
             <div class="line line-right"></div>
         </div>
-        <img class="main-image-section" src="img/produkcja-folii.jpg" alt="">
+        <img class="main-image-section" src="img/produkcja-folii.jpg" alt="Linia Queens do rozdmuchu folii trzy-warstwowej">
         <div class="section-container-for-text">
             <ol id="ol-production-container" class="ol-container">
                 <li><h3 class="list-item-headline">KIM JESTEŚMY</h3>
                     <ul>
                         <li>
-                            <b>Liderem w branży worków U-Liner, Bootle Neck, Open Top.</b> W swojej ofercie mamy również produkty dla branży meblarskiej, chemicznej, spożywczej.
+                            <b>Liderem w branży worków U-Liner, Bootle Neck, Open Top.</b> W swojej ofercie mamy również produkty opakowaniowe dla branży meblarskiej, chemicznej, spożywczej.
                         </li>
                         <li>
                             Do tej pory zaufało nam większość producentów opakowań BIG-BAG w Polsce.
                         </li>
                         <li>
-                            Nasze produkty można spotkać w Niemczech, Szwecji, Serbii, Francji, Litwie.
+                            Nasze produkty można spotkać w Polsce, Niemczech, Szwecji, Serbii, Francji, Litwie.
                         </li>
                         <li>
                             Do grudnia 2022 roku sprzedaliśmy 17 mln worków o łącznej wadze 8 mln kilogramów.
@@ -140,8 +183,8 @@
                             Wykorzystujemy zasady Gospodarki Obiegu Zamkniętego. Skład wyrobów zaprojektowaliśmy w taki sposób, by odpady technologiczne mogły zyskać drugie życie. W tym celu uruchomiliśmy własną linię do recyklingu opakowań PE. Prowadzimy również odbiór niezużytych i wadliwych opakowań powstałych u naszych klientów. W tym roku wprowadziliśmy JAKO PIERWSI W POLSCE wykonaną w 100% z recyklatu PPR oraz PCR wkładkę foliową z kominem zasypowym typu Uliner. o parametrach zbliżonych do wkładki wykonanej z oryginału. 
                         </li>
                     </ul>
-                </li>     
-            </ol>    
+                </li>
+            </ol>
             <h3 class="list-item-headline center-text">PRODUKT SKROJONY NA MIARĘ</h3>
                 <p>
                     Masz problem z realizacją nietypowego worka? A może w ekspresowym tempie musisz dostarczyć próbę produktu do klienta? Chcesz specyficzny kolor lub rozmiar worka? Nagle w piątek późnym popołudniem kontrahent zamówił nieprzewidzianą partię z krótkim terminem realizacji? Stary dostawca zawiódł? Poszukujesz nowego dostawcy? Któż z nas nie boryka się z takimi problemami? Skontaktuj się z nami, wspólnie rozwiążemy nawet najtrudniejszy problem.
@@ -173,7 +216,7 @@
             <h2 class="headline-next-to-logo">ZGRZEWANIE FOLII</h2>
             <div class="line line-right"></div>
         </div>
-        <img class="main-image-section" src="img/zgrzewanie-folii.jpg" alt="">
+        <img class="main-image-section" src="img/zgrzewanie-folii.jpg" alt="Linia do zgrzewania folii do wymiaru wkładki foliowej U-Liner, Bootle Neck, Open Top">
         <div class="section-container-for-text">
             <p>
                 <b>Wkłady foliowe przystosowane do wielkogabarytowych worków BIG BAG to produkty wielokrotnego użytku.</b> Wkłady do BIG BAG-ów mają szerokie zastosowanie w przemyśle rolniczym, spożywczym oraz transportowym. Wkłady wykonane z folii często używane są do magazynowania nawozów, substancji pylistych, jak również kiszenia produktów spożywczych. Wkład umieszczony w kontenerze BIG BAG stanowi dodatkową ochronę dla przechowywanego czy transportowanego towaru. Chroni towar przed wilgocią, jak również pełni funkcję uszczelnienia szwów. 
@@ -235,7 +278,7 @@
                         </li>
                         <li>
                             Dane techniczne:
-                            <ul>                
+                            <ul>
                                 <li>grubość folii: 30-120 mikronów</li>
                                 <li>wysokość: max. 3500 mm</li>
                                 <li>szerokość: max. 1500 mm (bez zakładek w środku rękawa)</li>
@@ -247,55 +290,59 @@
                     </ul>
                 </li>
             </ol>
-            <h3 class="list-item-headline center-text">Metoda 8 kroków do uzyskania perfekcyjnego worka</h3>
-            <p>
-                Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
-            </p>
-            <ol id="ol-welding-container-steps">
-                <li><h4 class="list-item-headline">Krok pierwszy — produkcja rękawa</h4>
-                    <ul>
-                        <li>trójwarstwowa linia do rozdmuchu folii</li>
-                        <li>automatyczny system kontroli grubości</li>
-                        <li>grawimetryczny system dozowania granulatów</li>
-                        <li>kontrola prowadzenia wstęgi</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok drugi — badanie grubości</h4>
-                    <ul>
-                        <li>na każdej rolce przeprowadzamy pomiar średniej grubości folii w warunkach laboratoryjnych</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok trzeci — badanie na wydłużenie wzdłużne i poprzeczne</h4>
-                    <ul>
-                        <li>każdą wyprodukowaną rolkę sprawdzamy pod względem składu oraz pod kątem rozciągliwości</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok czwarty — badanie udarności</h4>
-                    <ul>
-                        <li>na urządzeniu do sprawdzania DART DROP badamy jaką siłę wytrzyma nasza folia w teście symulującym przebicie</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok piąty — zgrzewanie worków</h4>
-                    <ul>
-                        <li>produkcja worka na impulsowej zgrzewarce, z wydajnością do 20 tys. worków U-liner oraz Bootle Neck dziennie</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok szósty — wytrzymałość zgrzewów</h4>
-                    <ul>
-                        <li>test na zaprojektowanej przez naszych specjalistów maszynie do kontroli wytrzymałości zgrzewu</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok siódmy — kontrola jakości</h4>
-                    <ul>
-                        <li>każdy nasz worek jest przeglądany przez pracowników Działu Kontroli Jakości</li>
-                    </ul>
-                </li>
-                <li><h4 class="list-item-headline">Krok ósmy — odpowiednie opakowanie</h4>
-                    <ul>
-                        <li>nasze worki transportowane są w specjalnie zaprojektowanych kartonowych BOX-ach, dzięki czemu eliminujemy ich uszkodzenie, zabrudzenie, otarcia, zamoknięcia</li>
-                    </ul>
-                </li>
-            </ol>
+            <div class="cutoff-text">
+                <h3 class="list-item-headline center-text">Metoda 8 kroków do uzyskania perfekcyjnego worka</h3>
+                <p>
+                    Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
+                </p>
+                <ol id="ol-welding-container-steps" class="list-expanded">
+                    <li><h4 class="list-item-headline">Krok pierwszy — produkcja rękawa</h4>
+                        <ul>
+                            <li>trójwarstwowa linia do rozdmuchu folii</li>
+                            <li>automatyczny system kontroli grubości</li>
+                            <li>grawimetryczny system dozowania granulatów</li>
+                            <li>kontrola prowadzenia wstęgi</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok drugi — badanie grubości</h4>
+                        <ul>
+                            <li>na każdej rolce przeprowadzamy pomiar średniej grubości folii w warunkach laboratoryjnych</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok trzeci — badanie na wydłużenie wzdłużne i poprzeczne</h4>
+                        <ul>
+                            <li>każdą wyprodukowaną rolkę sprawdzamy pod względem składu oraz pod kątem rozciągliwości</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok czwarty — badanie udarności</h4>
+                        <ul>
+                            <li>na urządzeniu do sprawdzania DART DROP badamy jaką siłę wytrzyma nasza folia w teście symulującym przebicie</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok piąty — zgrzewanie worków</h4>
+                        <ul>
+                            <li>produkcja worka na impulsowej zgrzewarce, z wydajnością do 20 tys. worków U-liner oraz Bootle Neck dziennie</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok szósty — wytrzymałość zgrzewów</h4>
+                        <ul>
+                            <li>test na zaprojektowanej przez naszych specjalistów maszynie do kontroli wytrzymałości zgrzewu</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok siódmy — kontrola jakości</h4>
+                        <ul>
+                            <li>każdy nasz worek jest przeglądany przez pracowników Działu Kontroli Jakości</li>
+                        </ul>
+                    </li>
+                    <li><h4 class="list-item-headline">Krok ósmy — odpowiednie opakowanie</h4>
+                        <ul>
+                            <li>nasze worki transportowane są w specjalnie zaprojektowanych kartonowych BOX-ach, dzięki czemu eliminujemy ich uszkodzenie, zabrudzenie, otarcia, zamoknięcia</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <!-- <span class="triangle-to-expand-list">&#x25BC;</span> -->
+            <input class="expand-button" type="checkbox" aria-hidden="true">
         </div>
 
         <!-- FORM FOR WELDING -->
@@ -327,6 +374,9 @@
             <p>
                 W ramach naszej działalności jesteśmy zainteresowani odpadami poprodukcyjnymi PE, PP, PET oraz tworzywami technicznymi ABS, PC, PS. Doświadczenie, wykwalifikowany personel oraz kontrola jakości pozwala nam na uzyskanie regranulatów o paramtetrach jakościowych umożliwiających wykorzystanie go do produkcji nowych produktów.
             </p>
+            <p>
+                Jesteś zainteresowany zakupem poprodukcyjnych regranulatów, przemiałów? Produkujesz folię, narzędzia, skrzynki, beczki, inne? Zapraszamy do kontaktu.
+            </p>
         </div>
 
         <!-- FORM FOR RECYCLING -->
@@ -341,6 +391,8 @@
     </section>
 
     <!-- BUY WASTE SECTION -->
+    <span id="trading" class="hidden-mark-for-navigation"></span>
+
     <section id="buy-waste" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
@@ -371,7 +423,9 @@
         </form>
     </section>
 
-    <!-- NEWS SECTION -->
+        <!-- NEWS SECTION -->
+    <span id="aktualności" class="hidden-mark-for-navigation"></span>
+
     <section id="news" class="section-container">
         <header class="headline-clear">
             <div class="line line-both"></div>
@@ -394,7 +448,10 @@
          END ARTICLES -->
     </section>
 
+
     <!-- CONTACT SECTION -->
+    <span id="kontakt" class="hidden-mark-for-navigation"></span>
+
     <section id="contact">
         <header class="headline-clear">
             <div class="line line-both"></div>
@@ -420,14 +477,14 @@
                 <p><a href="tel:+48530861292">+48 530 861 292</a></p>
                 <p><a href="mailto:ksiegowosc@h4t.com.pl">ksiegowosc@h4t.com.pl</a></p>
             </div>
-            <div class="line">       
+            <div class="line">
             </div>
             <div>
                 <span class="contact-form-headline">Zakład nr 1:</span>
                 <p>Stara Dębowa Wola 25A</p>
                 <p>27-400 Stara Dębowa Wola</p>
                 <div class="google-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.2338691346063!2d21.42174468209811!3d50.9949745441264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47180bb6556a4495%3A0x9b2058c93ccfeacf!2sStara%20D%C4%99bowa%20Wola%2025A%2C%2027-400%20Stara%20D%C4%99bowa%20Wola!5e0!3m2!1spl!2spl!4v1669134645164!5m2!1spl!2spl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.2338691346063!2d21.42174468209811!3d50.9949745441264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47180bb6556a4495%3A0x9b2058c93ccfeacf!2sStara%20D%C4%99bowa%20Wola%2025A%2C%2027-400%20Stara%20D%C4%99bowa%20Wola!5e0!3m2!1spl!2spl!4v1669134645164!5m2!1spl!2spl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="google-map"></iframe>
                 </div>
             </div>
             <div>
@@ -435,14 +492,14 @@
                 <p>Batalionów Chłopskich 71</p>
                 <p>25-671 Kielce</p>
                 <div class="google-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.573996609573!2d20.594757015955576!3d50.89459446314277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4718286fc3074b59%3A0xa737f48705394d61!2sBatalion%C3%B3w%20Ch%C5%82opskich%2071%2C%2025-671%20Kielce!5e0!3m2!1spl!2spl!4v1669134720338!5m2!1spl!2spl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2516.573996609573!2d20.594757015955576!3d50.89459446314277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4718286fc3074b59%3A0xa737f48705394d61!2sBatalion%C3%B3w%20Ch%C5%82opskich%2071%2C%2025-671%20Kielce!5e0!3m2!1spl!2spl!4v1669134720338!5m2!1spl!2spl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="google-map"></iframe>
                 </div>
             </div>
             <div>
                 <span class="contact-form-headline">Biuro Handlowe Pomorze:</span>
                 <p>ul. Kalinowa 29</p>
                 <p>83-031 Kleszczewko</p>
-            </div>    
+            </div>
         </div>
     </section>
 
