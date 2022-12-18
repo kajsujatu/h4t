@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" async></script>
+
+    <link rel="alternate" hreflang="x-deafult" href="http://www.h4t.com.pl">
+    <link rel="alternate" hreflang="pl" href="http://www.h4t.com.pl">
+    <link rel="alternate" hreflang="en" href="http://www.h4t.com.pl/en">
+    <link rel="alternate" hreflang="de" href="http://www.h4t.com.pl/de">
     <?php include 'sentMail.php';?>
 </head>
 <body>
@@ -24,8 +29,8 @@
             <nav>
                 <ul id="navigation-links" data-visible="false">
                     <li>
-                        <a href="#produkcja">
-                            Produkcja
+                        <a href="#production">
+                            Production
                         </a>
                     </li>
                     <li>
@@ -34,12 +39,25 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#aktualności">
+                        <a href="#aktualnosci">
                             Aktualności
                         </a>
                     </li>
                     <li>
                         <a href="#kontakt">Kontakt</a>
+                    </li>
+                    <li>
+                        <ul id="lang-menu-mobile">
+                            <li class="active-lang">
+                                <a href="#">PL</a>
+                            </li>
+                            <li>
+                                <a href="/en">EN</a>
+                            </li>
+                            <li>
+                                <a href="/de">DE</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <!-- BUTTON HAMBURGER ON MOBILE -->
@@ -50,7 +68,20 @@
                     <span class="menu-line line3"></span>
                 </button>
             </nav>
-            <!-- <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div> -->
+            <div id="lang-menu">
+                <div id="selected-lang">PL</div>
+                <ul>
+                    <li>
+                        <a href="#">PL</a>
+                    </li>
+                    <li>
+                        <a href="/en">EN</a>
+                    </li>
+                    <li>
+                        <a href="/de">DE</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -71,12 +102,12 @@
             <div id="sector-middle"></div>
             <ul id="circular-menu">
                 <li class="button" id="sector-one">
-                    <a class="button-link" href="#recycling">
-                        POZNAJ PROCES <span class="sr-only">RECYKLINGU</span>
+                    <a class="button-link" href="#recykling-folii">
+                        POZNAJ PROCES <span class="sr-only">RECYKLINGU FOLII</span>
                     </a>
                 </li>
                 <li class="button" id="sector-two">
-                    <a class="button-link" href="#buy-waste">
+                    <a class="button-link" href="#zakup-odpadu">
                         POZNAJ PROCES <span class="sr-only">ZAKUPU ODPADU</span>
                     </a>
                 </li>
@@ -86,12 +117,12 @@
                     </a>
                 </li>
                 <li class="button" id="sector-four">
-                    <a class="button-link" href="#welding">
+                    <a class="button-link" href="#zgrzewanie-folii">
                         POZNAJ PROCES <span class="sr-only">ZGRZEWANIA FOLII</span>
                     </a>
                 </li>
                 <li class="button" id="sector-five">
-                    <a class="button-link" href="#production">
+                    <a class="button-link" href="#produkcja-folii">
                         POZNAJ PROCES <span class="sr-only">PRODUKCJI FOLII</span>
                     </a>
                 </li>
@@ -128,12 +159,13 @@
     </div>
 
     <!-- PRODUCTION SECTION -->
-    <span id="produkcja" class="hidden-mark-for-navigation"></span>
+    <span id="production" class="hidden-mark-for-navigation"></span>
+    <span id="produkcja-folii" class="hidden-mark-for-navigation"></span>
 
     <section id="production" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Production">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
@@ -207,10 +239,12 @@
     </section>
 
     <!-- WELDING SECTION -->
+    <span id="zgrzewanie-folii" class="hidden-mark-for-navigation"></span>
+
     <section id="welding" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Production">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">ZGRZEWANIE FOLII</h2>
@@ -290,7 +324,8 @@
                     </ul>
                 </li>
             </ol>
-            <div class="cutoff-text">
+            <span id="metoda-8-krokow-do-uzyskania-perfekcyjnego-worka" class="hidden-mark-for-navigation"></span>
+            <div id="cutoff-text" data-visible="false">
                 <h3 class="list-item-headline center-text">Metoda 8 kroków do uzyskania perfekcyjnego worka</h3>
                 <p>
                     Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
@@ -342,7 +377,8 @@
                 </ol>
             </div>
             <!-- <span class="triangle-to-expand-list">&#x25BC;</span> -->
-            <input class="expand-button" type="checkbox" aria-hidden="true">
+            <!-- <input class="expand-button" type="checkbox" aria-hidden="true"> -->
+            <button id="expand-button" class="expand-button-pl" href="#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka"></button>
         </div>
 
         <!-- FORM FOR WELDING -->
@@ -357,10 +393,12 @@
     </section>
 
     <!-- RECYCLING SECTION -->
+    <span id="recykling-folii" class="hidden-mark-for-navigation"></span>
+
     <section id="recycling" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Produkcja">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">RECYKLING FOLII</h2>
@@ -392,6 +430,7 @@
 
     <!-- BUY WASTE SECTION -->
     <span id="trading" class="hidden-mark-for-navigation"></span>
+    <span id="zakup-odpadu" class="hidden-mark-for-navigation"></span>
 
     <section id="buy-waste" class="section-container">
         <div class="headline-with-logo">
@@ -424,7 +463,7 @@
     </section>
 
         <!-- NEWS SECTION -->
-    <span id="aktualności" class="hidden-mark-for-navigation"></span>
+    <span id="aktualnosci" class="hidden-mark-for-navigation"></span>
 
     <section id="news" class="section-container">
         <header class="headline-clear">
@@ -507,11 +546,17 @@
     <footer>
         <div id="footer-container">
             <div>
-                <span>HEAD4TECH Sp. z o. o. Wszelkie prawa zastrzeżone</span>
+                <span>
+                    Copyright <span class="copy-symbol">&copy;</span> <span id="current-year"></span> HEAD4TECH Sp. z o. o. 
+                </span>
             </div>
             <div>
-                <span>NIP: 6040228072</span>
-                <span>KRS: 0000943944</span>
+                <span>
+                    NIP: 6040228072
+                </span>
+                <span>
+                    KRS: 0000943944
+                </span>
             </div>
         </div> 
     </footer>

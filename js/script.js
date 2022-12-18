@@ -1,54 +1,17 @@
-// Circular menu - changing logo in the middle of circle
+// Change main logo at the top
+let images = ['/img/logo-h4t-horizontal.svg', '/img/logo-h4t-production-horizontal.svg', '/img/logo-h4t-trading-horizontal.svg'];
 
-const circularMenu = document.getElementById('circular-menu');
-const sectorMiddle = document.getElementById('sector-middle');
-const sectorOne = document.getElementById('sector-one');
-const sectorTwo = document.getElementById('sector-two');
-const sectorThree = document.getElementById('sector-three');
-const sectorFour = document.getElementById('sector-four');
-const sectorFive = document.getElementById('sector-five');
+let index = 0;
+const imgElement = document.querySelector('#logo-top');
 
-function setLogoProductionInSectorMiddle() {
-   sectorMiddle.style.backgroundImage = "url(img/logo-h4t-produkcja.svg)";
-   sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
-   sectorMiddle.style.backgroundRepeat = "no-repeat";
-   sectorMiddle.style.backgroundPosition = "center";
+function change() {
+   imgElement.src = images[index];
+   index > 1 ? index = 0 : index++;
+}
+
+window.onload = function() {
+    setInterval(change, 8000);
 };
-
-function setLogoTradingInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(img/logo-h4t-trading.svg)";
-    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
-    sectorMiddle.style.backgroundRepeat = "no-repeat";
-    sectorMiddle.style.backgroundPosition = "center";
-};
-
-function setBasicLogoInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(img/logo-h4t.svg)";
-    sectorMiddle.style.backgroundSize = "min(4.4rem, 45%)";
-    sectorMiddle.style.backgroundRepeat = "no-repeat";
-    sectorMiddle.style.backgroundPosition = "center";
-};
-
-sectorOne.addEventListener('mouseover', setLogoProductionInSectorMiddle);
-sectorOne.addEventListener('mouseout', setBasicLogoInSectorMiddle);
-sectorFour.addEventListener('mouseover', setLogoProductionInSectorMiddle);
-sectorFour.addEventListener('mouseout', setBasicLogoInSectorMiddle);
-sectorFive.addEventListener('mouseover', setLogoProductionInSectorMiddle);
-sectorFive.addEventListener('mouseout', setBasicLogoInSectorMiddle);
-
-sectorTwo.addEventListener('mouseover', setLogoTradingInSectorMiddle);
-sectorTwo.addEventListener('mouseout', setBasicLogoInSectorMiddle);
-sectorThree.addEventListener('mouseover', setLogoTradingInSectorMiddle);
-sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
-
-//const expandArticle = document.querySelectorAll('.expand-article-link')[0];
-//
-//expandArticle.addEventListener('click', function() {
-//    document.querySelector('.article-content').classList.toggle('expand');
-//    if (this.innerHTML.includes("Rozwiń")) this.innerHTML = "Zwiń &#9650;"
-//    else if (this.innerHTML.includes("Zwiń")) this.innerHTML = "Rozwiń &#9660;"
-//});
-//
 
 // Hamburger Menu
 const navigationLinks = document.getElementById('navigation-links');
@@ -66,6 +29,39 @@ navMobile.addEventListener('click', () => {
     }
 });
 
+// Circular menu - changing on hover logo in the middle of the circle
+const circularMenu = document.getElementById('circular-menu');
+const sectorMiddle = document.getElementById('sector-middle');
+const sectorOne = document.getElementById('sector-one');
+const sectorTwo = document.getElementById('sector-two');
+const sectorThree = document.getElementById('sector-three');
+const sectorFour = document.getElementById('sector-four');
+const sectorFive = document.getElementById('sector-five');
+
+function setLogoProductionInSectorMiddle() {
+   sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-production.svg)";
+};
+
+function setLogoTradingInSectorMiddle() {
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-trading.svg)";
+};
+
+function setBasicLogoInSectorMiddle() {
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t.svg)";
+};
+
+sectorOne.addEventListener('mouseover', setLogoProductionInSectorMiddle);
+sectorOne.addEventListener('mouseout', setBasicLogoInSectorMiddle);
+sectorFour.addEventListener('mouseover', setLogoProductionInSectorMiddle);
+sectorFour.addEventListener('mouseout', setBasicLogoInSectorMiddle);
+sectorFive.addEventListener('mouseover', setLogoProductionInSectorMiddle);
+sectorFive.addEventListener('mouseout', setBasicLogoInSectorMiddle);
+
+sectorTwo.addEventListener('mouseover', setLogoTradingInSectorMiddle);
+sectorTwo.addEventListener('mouseout', setBasicLogoInSectorMiddle);
+sectorThree.addEventListener('mouseover', setLogoTradingInSectorMiddle);
+sectorThree.addEventListener('mouseout', setBasicLogoInSectorMiddle);
+
 // Stop Animations During Window Resizing - mostly for mobile navigation
 let resizeTimer;
 window.addEventListener("resize", () => {
@@ -78,7 +74,7 @@ window.addEventListener("resize", () => {
 
 // Propeller.js
     setTimeout(() => {
-        
+
         new Propeller(document.getElementById('circular-menu'), {
             inertia: 1,
             speed: -(.2),
@@ -113,21 +109,19 @@ window.addEventListener("resize", () => {
          }
      }
 
-// Change main logo at the top
-     let images = ['img/logo-h4t-horizontal.svg', 'img/logo-h4t-produkcja-horizontal.svg', 'img/logo-h4t-trading-horizontal.svg'];
+// Expand list
+    const expandButton = document.getElementById('expand-button');
+    const expandedDiv = document.getElementById('cutoff-text');
 
-     let index = 0;
-     const imgElement = document.querySelector('#logo-top');
-     
-     function change() {
-        imgElement.src = images[index];
-        index > 1 ? index = 0 : index++;
-     }
-
-     window.onload = function() {
-         setInterval(change, 8000);
-     };
-
+    expandButton.addEventListener('click', () => {
+        const visibility = expandedDiv.getAttribute('data-visible');
+        if (visibility === 'false') { 
+            expandedDiv.setAttribute('data-visible', true);
+         } else if (visibility === 'true') {
+            expandedDiv.setAttribute('data-visible', false);
+            window.location.href='#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka';
+         }
+    });
 
 // Expand list - not use anymore but save code for future
 //     const listContainedExpandedList = document.getElementById('ol-welding-container-steps').children;
@@ -148,6 +142,19 @@ window.addEventListener("resize", () => {
 //    });
 //};
 
+//const expandArticle = document.querySelectorAll('.expand-article-link')[0];
+//
+//expandArticle.addEventListener('click', function() {
+//    document.querySelector('.article-content').classList.toggle('expand');
+//    if (this.innerHTML.includes("Rozwiń")) this.innerHTML = "Zwiń &#9650;"
+//    else if (this.innerHTML.includes("Zwiń")) this.innerHTML = "Rozwiń &#9660;"
+//});
+//
+
+// Current Year
+const currentYearSpan = document.getElementById('current-year');
+const currentYear = new Date().getFullYear();
+currentYearSpan.innerText = currentYear;
 
 
 

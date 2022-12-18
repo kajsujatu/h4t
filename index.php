@@ -290,7 +290,8 @@
                     </ul>
                 </li>
             </ol>
-            <div class="cutoff-text">
+            <span id="metoda-8-krokow-do-uzyskania-perfekcyjnego-worka" class="hidden-mark-for-navigation"></span>
+            <div id="cutoff-text" data-visible="false">
                 <h3 class="list-item-headline center-text">Metoda 8 kroków do uzyskania perfekcyjnego worka</h3>
                 <p>
                     Wyprodukowanie worka, który sprosta nawet najtrudniejszym testom, wymaga kontroli na każdym z etapów produkcji. Opracowaliśmy schemat, który pomaga uniknąć nam błędów produkcyjnych. Zapraszamy do podróży.
@@ -342,7 +343,8 @@
                 </ol>
             </div>
             <!-- <span class="triangle-to-expand-list">&#x25BC;</span> -->
-            <input class="expand-button" type="checkbox" aria-hidden="true">
+            <!-- <input class="expand-button" type="checkbox" aria-hidden="true"> -->
+            <button id="expand-button" href="#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka"></button>
         </div>
 
         <!-- FORM FOR WELDING -->
