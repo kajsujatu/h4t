@@ -1,5 +1,5 @@
 // Change main logo at the top
-let images = ['/h4t/-test-23/img/logo-h4t-horizontal.svg', '/h4t/-test-23/img/logo-h4t-production-horizontal.svg', '/h4t/-test-23/img/logo-h4t-trading-horizontal.svg'];
+let images = ['/img/logo-h4t-horizontal.svg', '/img/logo-h4t-production-horizontal.svg', '/img/logo-h4t-trading-horizontal.svg'];
 
 let index = 0;
 const imgElement = document.querySelector('#logo-top');
@@ -39,15 +39,15 @@ const sectorFour = document.getElementById('sector-four');
 const sectorFive = document.getElementById('sector-five');
 
 function setLogoProductionInSectorMiddle() {
-   sectorMiddle.style.backgroundImage = "url(/h4t/-test-23/img/logo-h4t-production.svg)";
+   sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-production.svg)";
 };
 
 function setLogoTradingInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(/h4t/-test-23/img/logo-h4t-trading.svg)";
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t-trading.svg)";
 };
 
 function setBasicLogoInSectorMiddle() {
-    sectorMiddle.style.backgroundImage = "url(/h4t/-test-23/img/logo-h4t.svg)";
+    sectorMiddle.style.backgroundImage = "url(/img/logo-h4t.svg)";
 };
 
 sectorOne.addEventListener('mouseover', setLogoProductionInSectorMiddle);

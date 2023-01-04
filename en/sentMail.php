@@ -8,8 +8,8 @@ if(isset($_POST['submit-production'])) {
  $name = $_POST['name-production']; //getting customer name
  $fromEmail = $_POST['email-production']; //getting customer email
  $phone = $_POST['tel-production']; //getting customer phone number
- $subject = "Formularz kontaktowy - Produkcja folii";
- $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+ $subject = "Formularz kontaktowy EN - Produkcja folii";
+ $subject2 = "The message has been successfully sent to HEAD4TECH"; // For customer confirmation
  
  //Email body I will receive
  $message = "Dane kontaktowe klienta: " . "\n"
@@ -20,13 +20,13 @@ if(isset($_POST['submit-production'])) {
  
  //Message for client confirmation
  $message2 = $name . "," . "\n\n"
- . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
- . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-production'] . "\n\n"
- . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+ . "Thank you for contact. We will reply as soon as possible!" . "\n\n"
+ . "Content of the message sent via the contact form: " . "\n" . $_POST['message-production'] . "\n\n"
+ . "Best regards," . "\n" . "HEAD4TECH";
  
  //Email headers
  $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
- $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+ $headers2 = "Message from: " . $mailto; // This will receive client
  
  //PHP mailer function
  
@@ -36,9 +36,9 @@ if(isset($_POST['submit-production'])) {
   //Checking if Mails sent successfully
  
   if ($result1 && $result2) {
-    $success = "Twoja wiadomość została wysłana.";
+    $success = "Your message has been sent.";
   } else {
-    $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+    $failed = "Sorry, there was an error sending your message. Please try sending again in a few minutes.";
   }
 }
 
@@ -50,8 +50,8 @@ if(isset($_POST['submit-welding'])) {
   $name = $_POST['name-welding']; //getting customer name
   $fromEmail = $_POST['email-welding']; //getting customer email
   $phone = $_POST['tel-welding']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Zgrzewanie folii";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy EN - Zgrzewanie folii";
+  $subject2 = "The message has been successfully sent to HEAD4TECH"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -62,13 +62,13 @@ if(isset($_POST['submit-welding'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-welding'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Thank you for contact. We will reply as soon as possible!" . "\n\n"
+  . "Content of the message sent via the contact form: " . "\n" . $_POST['message-welding'] . "\n\n"
+  . "Best regards," . "\n" . "HEAD4TECH Sp. z o. o.";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Message from: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -78,9 +78,9 @@ if(isset($_POST['submit-welding'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana.";
+     $success = "Your message has been sent.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Sorry, there was an error sending your message. Please try sending again in a few minutes.";
    }
  }
 
@@ -92,8 +92,8 @@ if(isset($_POST['submit-recycling'])) {
   $name = $_POST['name-recycling']; //getting customer name
   $fromEmail = $_POST['email-recycling']; //getting customer email
   $phone = $_POST['tel-recycling']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Recycling";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy EN - Recycling";
+  $subject2 = "The message has been successfully sent to HEAD4TECH"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -104,13 +104,13 @@ if(isset($_POST['submit-recycling'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-recycling'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Thank you for contact. We will reply as soon as possible!" . "\n\n"
+  . "Content of the message sent via the contact form: " . "\n" . $_POST['message-recycling'] . "\n\n"
+  . "Best regards," . "\n" . "HEAD4TECH";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Message from: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -120,9 +120,9 @@ if(isset($_POST['submit-recycling'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana.";
+     $success = "Your message has been sent.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Sorry, there was an error sending your message. Please try sending again in a few minutes.";
    }
  }
 
@@ -134,8 +134,8 @@ if(isset($_POST['submit-recycling'])) {
   $name = $_POST['name-buy-waste']; //getting customer name
   $fromEmail = $_POST['email-buy-waste']; //getting customer email
   $phone = $_POST['tel-buy-waste']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Zakup odpadu";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy EN - Zakup odpadu";
+  $subject2 = "The message has been successfully sent to HEAD4TECH"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -146,13 +146,13 @@ if(isset($_POST['submit-recycling'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-buy-waste'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Thank you for contact. We will reply as soon as possible!" . "\n\n"
+  . "Content of the message sent via the contact form: " . "\n" . $_POST['message-buy-waste'] . "\n\n"
+  . "Best regards," . "\n" . "HEAD4TECH";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Message from: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -162,9 +162,9 @@ if(isset($_POST['submit-recycling'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana.";
+     $success = "Your message has been sent.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Sorry, there was an error sending your message. Please try sending again in a few minutes.";
    }
  }
  

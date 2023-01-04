@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" async></script>
+
+    <link rel="alternate" hreflang="x-deafult" href="http://www.h4t.com.pl">
+    <link rel="alternate" hreflang="pl" href="http://www.h4t.com.pl">
+    <link rel="alternate" hreflang="en" href="http://www.h4t.com.pl/en">
+    <link rel="alternate" hreflang="de" href="http://www.h4t.com.pl/de">
     <?php include 'sentMail.php';?>
 </head>
 <body>
@@ -24,8 +29,8 @@
             <nav>
                 <ul id="navigation-links" data-visible="false">
                     <li>
-                        <a href="#produkcja">
-                            Produkcja
+                        <a href="#production">
+                            Production
                         </a>
                     </li>
                     <li>
@@ -34,12 +39,35 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#aktualności">
+                        <a href="#co-robimy">
+                            Co robimy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka">
+                            Laboratorium
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#aktualnosci">
                             Aktualności
                         </a>
                     </li>
                     <li>
                         <a href="#kontakt">Kontakt</a>
+                    </li>
+                    <li>
+                        <ul id="lang-menu-mobile">
+                            <li class="active-lang">
+                                Polski
+                            </li>
+                            <li>
+                                <a href="./en">English</a>
+                            </li>
+                            <li>
+                                <a href="./de">Deutsch</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <!-- BUTTON HAMBURGER ON MOBILE -->
@@ -50,7 +78,17 @@
                     <span class="menu-line line3"></span>
                 </button>
             </nav>
-            <!-- <div id="choose-lang">PL <span class="choose-lang-triangle">&#9660;</span></div> -->
+            <div id="lang-menu">
+                <div id="selected-lang">Polski</div>
+                <ul>
+                    <li>
+                        <a href="./en">English</a>
+                    </li>
+                    <li>
+                        <a href="./de">Deutsch</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -71,12 +109,12 @@
             <div id="sector-middle"></div>
             <ul id="circular-menu">
                 <li class="button" id="sector-one">
-                    <a class="button-link" href="#recycling">
-                        POZNAJ PROCES <span class="sr-only">RECYKLINGU</span>
+                    <a class="button-link" href="#recykling-folii">
+                        POZNAJ PROCES <span class="sr-only">RECYKLINGU FOLII</span>
                     </a>
                 </li>
                 <li class="button" id="sector-two">
-                    <a class="button-link" href="#buy-waste">
+                    <a class="button-link" href="#zakup-odpadu">
                         POZNAJ PROCES <span class="sr-only">ZAKUPU ODPADU</span>
                     </a>
                 </li>
@@ -86,12 +124,12 @@
                     </a>
                 </li>
                 <li class="button" id="sector-four">
-                    <a class="button-link" href="#welding">
+                    <a class="button-link" href="#zgrzewanie-folii">
                         POZNAJ PROCES <span class="sr-only">ZGRZEWANIA FOLII</span>
                     </a>
                 </li>
                 <li class="button" id="sector-five">
-                    <a class="button-link" href="#production">
+                    <a class="button-link" href="#produkcja-folii">
                         POZNAJ PROCES <span class="sr-only">PRODUKCJI FOLII</span>
                     </a>
                 </li>
@@ -128,12 +166,13 @@
     </div>
 
     <!-- PRODUCTION SECTION -->
-    <span id="produkcja" class="hidden-mark-for-navigation"></span>
+    <span id="production" class="hidden-mark-for-navigation"></span>
+    <span id="produkcja-folii" class="hidden-mark-for-navigation"></span>
 
     <section id="production" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Production">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">PRODUKCJA FOLII</h2>
@@ -161,6 +200,7 @@
                         </li>
                     </ul>
                 </li>
+                <span id="co-robimy" class="hidden-mark-for-navigation"></span>
                 <li><h3 class="list-item-headline">CO ROBIMY</h3>
                     <ul>
                         <li>
@@ -169,6 +209,24 @@
                         <li>
                             Nasze produkty skierowane są głównie (ale nie tylko) do producentów kontenerów elastycznych typu BIG-BAG z angielskiego FIBC.
                         </li>
+                        <div class="technical-image-container">
+                            <div class="technical-image">
+                                <span class="technical-data">Rysunek techniczny U-Liner:</span>
+                                <img src="img/technical-u-liner.png" alt="Rysunek techniczny U-Liner">
+                            </div>
+                            <div class="technical-image">
+                                <span class="technical-data">Rysunek techniczny Bootle-Neck:</span>
+                                <img src="img/technical-bootle-neck.png" alt="Rysunek techniczny Bootle-Neck">
+                            </div>
+                            <div class="technical-image">
+                                <span class="technical-data">Rysunek techniczny Open Top:</span>
+                                <img src="img/technical-open-top.png" alt="Rysunek techniczny Open Top">
+                            </div>
+                            <div class="technical-image">
+                                <span class="technical-data">Rysunek techniczny Open Top + zakładki boczne:</span>
+                                <img src="img/technical-open-top-zakladki-boczne.png" alt="Rysunek techniczny Open Top z zakładkami bocznymi">
+                            </div>
+                        </div>
                     </ul>
                 </li> 
                 <li><h3 class="list-item-headline">CO NAS WYRÓŻNIA</h3> 
@@ -207,10 +265,12 @@
     </section>
 
     <!-- WELDING SECTION -->
+    <span id="zgrzewanie-folii" class="hidden-mark-for-navigation"></span>
+
     <section id="welding" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Production">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">ZGRZEWANIE FOLII</h2>
@@ -344,7 +404,7 @@
             </div>
             <!-- <span class="triangle-to-expand-list">&#x25BC;</span> -->
             <!-- <input class="expand-button" type="checkbox" aria-hidden="true"> -->
-            <button id="expand-button" href="#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka"></button>
+            <button id="expand-button" class="expand-button-pl" href="#metoda-8-krokow-do-uzyskania-perfekcyjnego-worka"></button>
         </div>
 
         <!-- FORM FOR WELDING -->
@@ -359,10 +419,12 @@
     </section>
 
     <!-- RECYCLING SECTION -->
+    <span id="recykling-folii" class="hidden-mark-for-navigation"></span>
+
     <section id="recycling" class="section-container">
         <div class="headline-with-logo">
             <div class="logo-horizontal-container">
-                <img class="logo-horizontal" src="img/logo-h4t-produkcja-horizontal.svg" alt="HEAD4TECH Produkcja">
+                <img class="logo-horizontal" src="img/logo-h4t-production-horizontal.svg" alt="HEAD4TECH Production">
             </div>
             <div class="line line-left"></div>
             <h2 class="headline-next-to-logo">RECYKLING FOLII</h2>
@@ -394,6 +456,7 @@
 
     <!-- BUY WASTE SECTION -->
     <span id="trading" class="hidden-mark-for-navigation"></span>
+    <span id="zakup-odpadu" class="hidden-mark-for-navigation"></span>
 
     <section id="buy-waste" class="section-container">
         <div class="headline-with-logo">
@@ -426,7 +489,7 @@
     </section>
 
         <!-- NEWS SECTION -->
-    <span id="aktualności" class="hidden-mark-for-navigation"></span>
+    <span id="aktualnosci" class="hidden-mark-for-navigation"></span>
 
     <section id="news" class="section-container">
         <header class="headline-clear">
@@ -468,9 +531,12 @@
                 <p><a href="mailto:produkcja@h4t.com.pl">produkcja@h4t.com.pl</a></p>
             </div>
             <div>
-                <span class="contact-form-headline">Dział Zakupów:</span>
+                <span class="contact-form-headline">Dział Handlowy:</span>
                 <p class="name">Krzysztof Rudziński</p>
                 <p><a href="tel:+48664926413">+48 664 926 413</a></p>
+                <p><a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a></p>
+                <p class="name pt">Maciej Kłos</p>
+                <p><a href="tel:+48664926413">+48 503 478 223</a></p>
                 <p><a href="mailto:biuro@h4t.com.pl">biuro@h4t.com.pl</a></p>
             </div>
             <div>
@@ -509,11 +575,17 @@
     <footer>
         <div id="footer-container">
             <div>
-                <span>HEAD4TECH Sp. z o. o. Wszelkie prawa zastrzeżone</span>
+                <span>
+                    Copyright <span class="copy-symbol">&copy;</span> <span id="current-year"></span> HEAD4TECH Sp. z o. o. 
+                </span>
             </div>
             <div>
-                <span>NIP: 6040228072</span>
-                <span>KRS: 0000943944</span>
+                <span>
+                    NIP: 6040228072
+                </span>
+                <span>
+                    KRS: 0000943944
+                </span>
             </div>
         </div> 
     </footer>

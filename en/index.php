@@ -59,7 +59,7 @@
                     <li>
                         <ul id="lang-menu-mobile">
                             <li>
-                                <a href="../index.html">Polski</a>
+                                <a href="../index.php">Polski</a>
                             </li>
                             <li class="active-lang">
                                 English
@@ -212,19 +212,19 @@
                         <div class="technical-image-container">
                             <div class="technical-image">
                                 <span class="technical-data">Technical drawing of U-Liner:</span>
-                                <img src="../img/technical-u-liner.png" alt="">
+                                <img src="../img/technical-u-liner.png" alt="Technical drawing of U-Liner">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technical drawing of Bootle-Neck:</span>
-                                <img src="../img/technical-bootle-neck.png" alt="">
+                                <img src="../img/technical-bootle-neck.png" alt="Technical drawing of Bootle-Neck">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technical drawing of Open Top:</span>
-                                <img src="../img/technical-open-top.png" alt="">
+                                <img src="../img/technical-open-top.png" alt="Technical drawing of Open Top">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technical drawing of Open Top + side pleats:</span>
-                                <img src="../img/technical-open-top-zakladki-boczne.png" alt="">
+                                <img src="../img/technical-open-top-zakladki-boczne.png" alt="Technical drawing of Open Top + side pleats">
                             </div>
                         </div>
                     </ul>

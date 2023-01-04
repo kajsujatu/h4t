@@ -1130,11 +1130,16 @@ footer #footer-container a:hover::after {
         flex: 0 1 100%;
         display: flex;
         justify-content: center;
+        padding-bottom: 1rem;
     }
 
     .headline-with-logo .line-left,
     .headline-with-logo .line-right {
         flex: 1 1 5%;
+    }
+
+    .headline-next-to-logo {
+        margin-block: .2rem;
     }
 
     .headline-clear {

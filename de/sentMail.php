@@ -8,8 +8,8 @@ if(isset($_POST['submit-production'])) {
  $name = $_POST['name-production']; //getting customer name
  $fromEmail = $_POST['email-production']; //getting customer email
  $phone = $_POST['tel-production']; //getting customer phone number
- $subject = "Formularz kontaktowy - Produkcja folii";
- $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+ $subject = "Formularz kontaktowy DE - Produkcja folii";
+ $subject2 = "Die Nachricht wurde erfolgreich an HEAD4TECH gesendet"; // For customer confirmation
  
  //Email body I will receive
  $message = "Dane kontaktowe klienta: " . "\n"
@@ -20,13 +20,13 @@ if(isset($_POST['submit-production'])) {
  
  //Message for client confirmation
  $message2 = $name . "," . "\n\n"
- . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
- . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-production'] . "\n\n"
- . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+ . "Danke, dass Sie uns kontaktiert haben. Wir werden so schnell wie möglich antworten!" . "\n\n"
+ . "Inhalt der über das Kontaktformular gesendeten Nachricht: " . "\n" . $_POST['message-production'] . "\n\n"
+ . "Mit freundlichen Grüßen," . "\n" . "HEAD4TECH Sp. z o. o.";
  
  //Email headers
  $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
- $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+ $headers2 = "Nachricht von: " . $mailto; // This will receive client
  
  //PHP mailer function
  
@@ -36,9 +36,9 @@ if(isset($_POST['submit-production'])) {
   //Checking if Mails sent successfully
  
   if ($result1 && $result2) {
-    $success = "Twoja wiadomość została wysłana";
+    $success = "Ihre Nachricht wurde gesendet.";
   } else {
-    $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+    $failed = "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es in ein paar Minuten erneut.";
   }
 }
 
@@ -50,8 +50,8 @@ if(isset($_POST['submit-welding'])) {
   $name = $_POST['name-welding']; //getting customer name
   $fromEmail = $_POST['email-welding']; //getting customer email
   $phone = $_POST['tel-welding']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Zgrzewanie folii";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy DE - Zgrzewanie folii";
+  $subject2 = "Die Nachricht wurde erfolgreich an HEAD4TECH gesendet"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -62,13 +62,13 @@ if(isset($_POST['submit-welding'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-welding'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Danke, dass Sie uns kontaktiert haben. Wir werden so schnell wie möglich antworten!" . "\n\n"
+  . "Inhalt der über das Kontaktformular gesendeten Nachricht: " . "\n" . $_POST['message-welding'] . "\n\n"
+  . "Mit freundlichen Grüßen," . "\n" . "HEAD4TECH Sp. z o. o.";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Nachricht von: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -78,9 +78,9 @@ if(isset($_POST['submit-welding'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana";
+     $success = "Ihre Nachricht wurde gesendet.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es in ein paar Minuten erneut.";
    }
  }
 
@@ -92,8 +92,8 @@ if(isset($_POST['submit-recycling'])) {
   $name = $_POST['name-recycling']; //getting customer name
   $fromEmail = $_POST['email-recycling']; //getting customer email
   $phone = $_POST['tel-recycling']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Recycling";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy DE - Recycling";
+  $subject2 = "Die Nachricht wurde erfolgreich an HEAD4TECH gesendet"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -104,13 +104,13 @@ if(isset($_POST['submit-recycling'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-recycling'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Danke, dass Sie uns kontaktiert haben. Wir werden so schnell wie möglich antworten!" . "\n\n"
+  . "Inhalt der über das Kontaktformular gesendeten Nachricht: " . "\n" . $_POST['message-recycling'] . "\n\n"
+  . "Mit freundlichen Grüßen," . "\n" . "HEAD4TECH Sp. z o. o.";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Nachricht von: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -120,9 +120,9 @@ if(isset($_POST['submit-recycling'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana";
+     $success = "Ihre Nachricht wurde gesendet.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es in ein paar Minuten erneut.";
    }
  }
 
@@ -134,8 +134,8 @@ if(isset($_POST['submit-recycling'])) {
   $name = $_POST['name-buy-waste']; //getting customer name
   $fromEmail = $_POST['email-buy-waste']; //getting customer email
   $phone = $_POST['tel-buy-waste']; //getting customer phone number
-  $subject = "Formularz kontaktowy - Zakup odpadu";
-  $subject2 = "Wiadomość została pomyślnie wysłana do HEAD4TECH Sp. z o. o."; // For customer confirmation
+  $subject = "Formularz kontaktowy DE - Zakup odpadu";
+  $subject2 = "Die Nachricht wurde erfolgreich an HEAD4TECH gesendet"; // For customer confirmation
   
   //Email body I will receive
   $message = "Dane kontaktowe klienta: " . "\n"
@@ -146,13 +146,13 @@ if(isset($_POST['submit-recycling'])) {
   
   //Message for client confirmation
   $message2 = $name . "," . "\n\n"
-  . "Dziękujemy za skontaktowanie się z nami. Odpowiemy jak najszybciej!" . "\n\n"
-  . "Treść wysłanej wiadomości przez formularz kontaktowy: " . "\n" . $_POST['message-buy-waste'] . "\n\n"
-  . "Pozdrawiamy serdecznie," . "\n" . "Zespół HEAD4TECH Sp. z o. o.";
+  . "Danke, dass Sie uns kontaktiert haben. Wir werden so schnell wie möglich antworten!" . "\n\n"
+  . "Inhalt der über das Kontaktformular gesendeten Nachricht: " . "\n" . $_POST['message-buy-waste'] . "\n\n"
+  . "Mit freundlichen Grüßen," . "\n" . "HEAD4TECH Sp. z o. o.";
   
   //Email headers
   $headers = "Wiadomość od: " . $fromEmail; // Client email, I will receive
-  $headers2 = "Wiadomość od: " . $mailto; // This will receive client
+  $headers2 = "Nachricht von: " . $mailto; // This will receive client
   
   //PHP mailer function
   
@@ -162,9 +162,9 @@ if(isset($_POST['submit-recycling'])) {
    //Checking if Mails sent successfully
   
    if ($result1 && $result2) {
-     $success = "Twoja wiadomość została wysłana";
+     $success = "Ihre Nachricht wurde gesendet.";
    } else {
-     $failed = "Przykro nam, wystąpił błąd podczas wysyłania wiadomości. Spróbuj wysłać ponownie za parę minut.";
+     $failed = "Entschuldigung, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es in ein paar Minuten erneut.";
    }
  }
  

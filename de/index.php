@@ -54,7 +54,7 @@
                     <li>
                         <ul id="lang-menu-mobile">
                             <li>
-                                <a href="../index.html">Polski</a>
+                                <a href="../index.php">Polski</a>
                             </li>
                             <li>
                                 <a href="../en">English</a>
@@ -207,19 +207,19 @@
                         <div class="technical-image-container">
                             <div class="technical-image">
                                 <span class="technical-data">Technische Zeichnung von U-Liner:</span>
-                                <img src="../img/technical-u-liner.png" alt="">
+                                <img src="../img/technical-u-liner.png" alt="Technische Zeichnung von U-Liner">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technische Zeichnung von Bootle-Neck:</span>
-                                <img src="../img/technical-bootle-neck.png" alt="">
+                                <img src="../img/technical-bootle-neck.png" alt="Technische Zeichnung von Bootle-Neck">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technische Zeichnung von Open Top:</span>
-                                <img src="../img/technical-open-top.png" alt="">
+                                <img src="../img/technical-open-top.png" alt="Technische Zeichnung von Open Top">
                             </div>
                             <div class="technical-image">
                                 <span class="technical-data">Technische Zeichnung von Open Top + Seitenlaschen:</span>
-                                <img src="../img/technical-open-top-zakladki-boczne.png" alt="">
+                                <img src="../img/technical-open-top-zakladki-boczne.png" alt="Technische Zeichnung von Open Top + Seitenlaschen">
                             </div>
                         </div>
                     </ul>
