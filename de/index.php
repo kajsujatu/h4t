@@ -77,7 +77,7 @@
                 <div id="selected-lang">Deutsch</div>
                 <ul>
                     <li>
-                        <a href="../index.html">Polski</a>
+                        <a href="../index.php">Polski</a>
                     </li>
                     <li>
                         <a href="../en">English</a>

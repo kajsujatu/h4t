@@ -82,7 +82,7 @@
                 <div id="selected-lang">English</div>
                 <ul>
                     <li>
-                        <a href="../index.html">Polski</a>
+                        <a href="../index.php">Polski</a>
                     </li>
                     <li>
                         <a href="../de">Deutsch</a>
